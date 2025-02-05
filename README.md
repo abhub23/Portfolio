@@ -1,4 +1,7 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Things Learned
+
+- While using [Tooltip](https://www.radix-ui.com/themes/docs/components/tooltip) or any other element we have to wrap the <App/> into the <Theme><Theme/>
+and also its @radix-ui/themes remember.
 
