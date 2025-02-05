@@ -1,9 +1,12 @@
-const Home = () => {
-    return (
-        <div className="text-6xl">
-            cdkcksdkcdscs
-        </div>
-    )
-}
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
-export default Home
+const Home = () => {
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
+};
+export default Home;
