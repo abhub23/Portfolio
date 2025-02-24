@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const Error = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const handleHome = () => {
-    navigate("/");
+    router.push("/")
   };
 
   return (
