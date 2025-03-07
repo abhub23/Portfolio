@@ -7,7 +7,7 @@ const Github: React.FC = (): JSX.Element => {
     <div className="flex flex-col items-center mb-12 mt-14">
       <p className={`${Bricolage} mb-5 text-4xl font-bold `}>Github Contributions</p>
       <Image
-        src="https://ghchart.rshah.org/216E44/abhub23"
+        src="https://ghchart.rshah.org/216E39/abhub23"
         alt="Github contribution Chart"
         width={780}
         height={500}
