@@ -1,20 +1,12 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Theme } from '@radix-ui/themes';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://github.com/abhub23'),
-  title: 'Abdullah Mukri',
+  title: 'Abdullah',
   description:
     "Abdullah Mukri is a Software Engineer and a Fullstack Developer who's expertize are in Building Scalable and Robust Maintainable Products from Scratch",
   keywords: [
@@ -39,11 +31,11 @@ export const metadata: Metadata = {
     siteId: 'https://x.com/abdullah_twt23',
   },
 
-  appLinks: {
-    web: {
-      url: new URL(''),
-    },
-  },
+  // appLinks: {
+  //   web: {
+  //     url: new URL(''),
+  //   },
+  // },
 
   category: 'Portfolio Website',
 };
@@ -55,7 +47,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`bg-white dark:bg-black`}>
+        <Theme>
+          {children}
+        </Theme>
+      </body>
     </html>
   );
 }
