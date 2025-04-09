@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Theme } from '@radix-ui/themes';
-
-
+import { DarkmodeProvider } from '@/store/DarkmodeProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://github.com/abhub23'),
@@ -48,9 +47,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-white dark:bg-black`}>
-        <Theme>
-          {children}
-        </Theme>
+        <DarkmodeProvider>
+          <Theme className="dark:!bg-black">{children}</Theme>
+        </DarkmodeProvider>
       </body>
     </html>
   );
