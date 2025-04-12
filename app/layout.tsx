@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Theme } from '@radix-ui/themes';
 import { DarkmodeProvider } from '@/store/DarkmodeProvider';
+import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://github.com/abhub23'),
