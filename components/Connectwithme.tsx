@@ -40,7 +40,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
             <textarea onInput={handleInput} ref={textareaRef} placeholder="Message" required={true} onChange={(e) => setMessage(e.currentTarget.value)}
                 className="border-black dark:border-white bg-white dark:bg-black p-2 border-2 min-h-[42px] h-[42px] overflow-hidden min-w-[705px] w-[705px] max-w-[705px] resize rounded-[4px]" />
             <button
-                className='border-black bg-black dark:bg-white dark:border-white text-[14px] text-white dark:text-black border-2 h-9 w-[705px] rounded-[4px] mt-1 cursor-pointer'
+                className='border-black bg-black dark:bg-white dark:border-white text-[14px] text-white dark:text-black border-2 h-9 w-[705px] rounded-[4px] mt-1 cursor-pointer hover:bg-stone-900'
                 onClick={handleMessage}> Send Message </button>
         </div>
     )
