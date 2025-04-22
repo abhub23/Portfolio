@@ -1,6 +1,6 @@
 {
     "watch": ["."],
     "ext": "ts",
-    "exec": "ts-node-esm index.ts"
-  }
+    "exec": "ts-node index.ts"
+}
   
