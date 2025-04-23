@@ -7,10 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model Users {
   id        Int      @id @default(autoincrement())
-  name      String   @default(uuid())
-  email     String
+  email     String   @unique
   message   String
   createdAt DateTime @default(now())
+
+  @@map("users")
 }
