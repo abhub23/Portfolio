@@ -1,7 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Bricolage } from '@/Utils/fonts';
+import { Bricolage } from '@/utils/fonts';
+import { motion } from 'motion/react';
 
 const ErrorPage = () => {
   const router = useRouter();
@@ -10,16 +11,22 @@ const ErrorPage = () => {
   };
 
   return (
-    <div className={`${Bricolage} bg-white flex flex-col justify-center items-center h-screen`}>
-      <div className="text-4xl text-black p-2 mb-1.5">PAGE NOT FOUND - 404 </div>
-      <div className="p-2">
+    <div className={`${Bricolage} bg-white dark:bg-black font-semibold flex flex-col justify-center items-center h-screen`}>
+      
+      <motion.div 
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className='flex flex-col justify-center items-center'
+      >
+        <p className="text-4xl text-black dark:text-white p-2 mb-1.5">PAGE NOT FOUND - 404 </p>
         <button
-          className="border-4 px-3 py-2 rounded-2xl bg-white cursor-pointer text-lg dark:border-gray-600 dark:bg-gray-800 dark:text-white "
+          className="px-3 py-2 p-2 rounded-md bg-black text-white cursor-pointer text-[14px] dark:bg-white dark:text-black "
           onClick={handleHome}
         >
           Go to Home
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };
