@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# What New I learned
 
-## Getting Started
+## 1. Using `Zustand` instead of ContextAPI
 
-First, run the development server:
+This is my useDarkmode file in Zustand where i also created an toggleDarkmode function which felt Why? `Reason is mentioned below...`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```ts
+import { create } from 'zustand';
+
+type DarkModeType = {
+  isDarkmode: 'dark' | 'light';
+  toggleDarkmode: () => void;
+  initializeTheme: () => void;
+};
+
+export const useDarkmode = create<DarkModeType>((set) => ({
+  isDarkmode: 'light',
+
+  initializeTheme: () => {
+    const storedPreference = localStorage.getItem('theme') as 'dark' | 'light' | null;
+    const prefersDark = storedPreference === 'dark';
+
+    document.documentElement.classList.toggle('dark', prefersDark);
+    document.documentElement.style.overflowY = 'auto';
+
+    set({ isDarkmode: prefersDark ? 'dark' : 'light' });
+  },
+
+  toggleDarkmode: () =>
+    set((state) => {
+      const toggleTheme = state.isDarkmode === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', toggleTheme);
+      document.documentElement.classList.toggle('dark', toggleTheme === 'dark');
+      return { isDarkmode: toggleTheme };
+    }),
+}));
+
 ```
+Here in Zustand i cant use useEffect like ContextAPI because  `Zustand is not an react component like ContextAPI` so i created this toggleDarkmode function and make a seperate file called `DarkmodeProvider` which will wrap the main <App/> or {Children} in my React or Next App so changes will be applied globally.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```ts
+import { ReactNode, useEffect } from 'react';
+import { useDarkmode } from '@/store/useDarkmode';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+export const DarkmodeProvider = ({ children }: { children: ReactNode }) => {
+  const initializeTheme = useDarkmode((state) => state.initializeTheme);
 
-## Learn More
+  useEffect(() => {
+    initializeTheme();
+  }, [initializeTheme]);
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  return <>{children}</>;
+};
+```
