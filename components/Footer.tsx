@@ -9,7 +9,7 @@ const Footer = () => {
     >
       Designed and Developed by
       <Link
-        className="text-rose-300 ml-1 hover:underline"
+        className="text-rose-400 ml-1 transition-all duration-500"
         href="https://x.com/abdullah_twt23"
         target="_black"
       >
