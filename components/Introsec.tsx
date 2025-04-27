@@ -1,26 +1,45 @@
+'use client'
+
 import { JSX } from 'react';
-import { Bricolage } from '@/Utils/fonts';
-import Button from './Button';
+import { Bricolage } from '@/utils/fonts';
+import Button from '../components/Button';
 
 const Introsec: React.FC = (): JSX.Element => {
+
+  const openCal = () => {
+    window.open('https://www.github.com/abhub23', '_blank')
+  }
+
+  const scrollDown = () => {
+   window.scrollTo({top: 1400, behavior: 'smooth' })
+  }
+
   return (
-    <div className={`h-88 flex flex-col items-center mt-16 justify-center bg-transparent ${Bricolage} `}>
-      <div className="text-5xl p-2 font-extrabold text-black">Hey, I'm Abdullah Mukri</div>
-      <div className="text-md pt-2 mx-86 text-black">
+    <div
+      className={`lg:h-70 flex flex-col items-center mt-48 justify-center text-black dark:text-white bg-transparent ${Bricolage} `}
+    >
+      <div className="lg:text-[42px] p-2 font-extrabold text-[26px]">
+        Hey, I'm Abdullah Mukri
+      </div>
+
+      <div className="lg:text-[16px] text-sm pt-1 lg:mt-2 px-4 lg:mx-72  ">
         Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
         Typescript and Go.
       </div>
-      <div className="text-md mx-94 text-black">
+
+      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-70">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </div>
-      <div className="text-md px-2 mx-100 text-black">
+
+      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-100">
         Want's to connect or just say hi? please don't hesitate. feel free to connect!
       </div>
-      <div className="mt-10 flex space-x-10">
-        <Button prop="Book a Meet" />
-        <Button prop="Get in Touch" />
+      <div className="mt-10 flex lg:space-x-8 space-x-5">
+        <Button prop="Book a Meet" onClick={openCal} />
+        <Button prop="Get in Touch" onClick={scrollDown} />
       </div>
+      
     </div>
   );
 };
