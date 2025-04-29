@@ -22,20 +22,20 @@ const Introsec: React.FC = (): JSX.Element => {
         Hey, I'm Abdullah Mukri
       </div>
 
-      <div className="lg:text-[16px] text-sm pt-1 lg:mt-2 px-4 lg:mx-72  ">
+      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-auto  ">
         Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
         Typescript and Go.
       </div>
 
-      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-70">
+      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-auto">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </div>
 
-      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-100">
+      <div className="lg:text-[16px] text-sm pt-1 px-4 lg:mx-auto">
         Want's to connect or just say hi? please don't hesitate. feel free to connect!
       </div>
-      <div className="mt-10 flex lg:space-x-8 space-x-5">
+      <div className="mt-10 flex lg:space-x-6 space-x-5">
         <Button prop="Book a Meet" onClick={openCal} />
         <Button prop="Get in Touch" onClick={scrollDown} />
       </div>
