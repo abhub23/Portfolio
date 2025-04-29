@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import { Bricolage } from '@/Utils/fonts';
+import { Bricolage } from '@/utils/fonts';
 
-const WebsiteBtn = () => {
+type WeblinkType = {
+  Weblink: string;
+};
+
+const WebsiteBtn: React.FC<WeblinkType> = ({ Weblink }) => {
   return (
     <div>
-      <Link href={''}>
-        <button className="group flex items-center h-6 cursor-pointer justify-center gap-2 px-2 py-2 font-bold border-2 border-black bg-red-600 text-white text-xs rounded-xs transition duration-400 hover:bg-white hover:text-black">
+      <Link href={Weblink} target="_blank">
+        <button className="group flex items-center h-6 cursor-pointer justify-center gap-1 p-1 pt-[5px] px-[5px] font-bold border-2 border-black dark:border-white bg-red-600 text-white text-xs rounded-xs transition duration-400 hover:bg-white hover:text-black">
           <svg
             width={14}
             height={14}

@@ -10,7 +10,7 @@ const GithubBtn: React.FC<SrclinkType> = ({ Srclink }) => {
   return (
     <div>
       <Link href={Srclink} target="_blank">
-        <button className=" group flex items-center h-6 cursor-pointer justify-center gap-1 p-1.5 font-bold border-2 border-black dark:border-white bg-red-600 text-white text-xs rounded-xs transition duration-500 hover:bg-white hover:text-black">
+        <button className=" group flex items-center h-6 cursor-pointer justify-center gap-1 p-1 pt-[5px] px-[5px] font-bold border-2 border-black dark:border-white bg-red-600 text-white text-xs rounded-xs transition duration-500 hover:bg-white hover:text-black">
           <svg
             width={14}
             height={14}
