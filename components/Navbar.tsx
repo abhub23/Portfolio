@@ -15,15 +15,16 @@ import {
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
+import type { JSX } from 'react';
 import { useDarkmode } from '@/store/useDarkmode';
 
-const Navbar = () => {
+const Navbar: React.FC = (): JSX.Element => {
   const { isDarkmode, toggleDarkmode } = useDarkmode();
   const pathname = usePathname();
 
   return (
     <nav className="w-full py-6 flex justify-center fixed top-0 z-50">
-      <div className="rounded-full w-[800px] sm:w-[800px] hover:w-[820px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl transition-all duration-300">
+      <div className="rounded-full w-[800px] lg:w-[860px] hover:w-[820px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl transition-all duration-300">
         <div className="flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all">
           <Link href="/" underline="none">
             <Tooltip content="Home">
@@ -65,14 +66,13 @@ const Navbar = () => {
             </Tooltip>
           </Link>
 
-          <span className=' bg-black dark:bg-gray-400 h-full'>
+          <span className=" bg-black dark:bg-gray-400 h-full">
             <Separator
               orientation="vertical"
               size={{ sm: '1', lg: '2', xl: '2' }}
               className="bg-black dark:bg-gray-400"
             />
           </span>
-
 
           <Link href="" target="_blank" underline="none">
             <Tooltip content="Resume">
@@ -106,7 +106,7 @@ const Navbar = () => {
             </Tooltip>
           </Link>
 
-          <span className=' bg-black dark:bg-gray-400 h-full'>
+          <span className=" bg-black dark:bg-gray-400 h-full">
             <Separator
               orientation="vertical"
               size={{ sm: '1', lg: '2', xl: '2' }}
