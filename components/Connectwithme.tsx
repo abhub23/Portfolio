@@ -6,7 +6,8 @@ import { Bricolage } from '@/utils/fonts';
 import { useEmail, useMessage } from '@/store/Connectwithme';
 import axios from 'axios';
 import sweetalert from '@/utils/Emptyalert';
-import { FaXTwitter, FaRegMessage } from 'react-icons/fa6';
+import { FaXTwitter} from 'react-icons/fa6';
+import {GrSchedules} from 'react-icons/gr'
 
 const Connectwithme: React.FC = (): JSX.Element => {
     //const { name, setName } = useName()
@@ -52,14 +53,17 @@ const Connectwithme: React.FC = (): JSX.Element => {
             </div>
 
 
-            <div className='flex mb-1 justify-start gap-x-[8px] p-1 h-[50px] w-full'>
-                <button className='h-[38px] bg-emerald-400 text-[12px] p-[2px] rounded-[6px] w-[145px] flex justify-center items-center cursor-pointer'>
-                    <FaRegMessage className='text-center mr-[5px]'/>
+            <div className='flex mb-1 justify-start gap-x-[12px] p-1 h-[50px] w-full'>
+                <button className='h-[38px] bg-emerald-400 hover:bg-emerald-400/90 text-[14px] font-medium p-[2px] rounded-[6px] w-[175px] flex text-black/80 dark:text-black/80 justify-center items-center cursor-pointer'
+                onClick={() => window.open('','_blank')}>
+                    <GrSchedules className='text-center text-[18px] mr-[5px]'/>
                     Schedule a Meeting</button>
 
-                <button className='h-[38px] text-[12px] p-[2px] bg-blue-400 rounded-[6px] w-[120px] flex justify-center items-center cursor-pointer'>
-                    <FaXTwitter className='text-center mr-[4px] '/>
-                    Chat on Twitter</button>
+                <button className='h-[38px] text-[14px] font-medium p-[2px] bg-blue-400 hover:bg-blue-400/95 text-white/80 dark:text-white/80 rounded-[6px] w-[140px] flex justify-center items-center cursor-pointer'
+                onClick={() => window.open('https://x.com/abdullah_twt23','_black')}>
+                    <FaXTwitter className='text-center text-[18px] mr-[4px] '/>
+                    Chat on Twitter
+                    </button>
             </div>
 
             <div className="p-[2px] font-normal font-stretch-ultra-condensed lg:text-[16px] text-[14px] ">
@@ -71,7 +75,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
                 required={true}
                 onChange={(e) => setEmail(e.currentTarget.value)}
                 value={email}
-                className="border-black focus:outline-none dark:border-white bg-white dark:bg-black lg:text-[15px] text-[12px] p-2 mb-[12px] lg:border-[2px] border-1 lg:h-[36px] h-[32px] lg:w-[705px] w-[325px] rounded-[4px]"
+                className="border-black/70 focus:outline-none dark:border-white/70 bg-white dark:bg-black lg:text-[15px] text-[12px] p-2 mb-[12px] lg:border-[2px] border-1 lg:h-[36px] h-[32px] lg:w-[705px] w-[325px] rounded-[4px]"
             />
             <div className="p-[2px] font-normal lg:text-[16px] text-[14px]">Message</div>
             <textarea
@@ -81,7 +85,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
                 required={true}
                 onChange={(e) => setMessage(e.currentTarget.value)}
                 value={message}
-                className="border-black focus:outline-none dark:border-white bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[2px] border-1 overflow-hidden
+                className="border-black/70 focus:outline-none dark:border-white/70 bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[2px] border-1 overflow-hidden
                 min-h-[72px] h-[72px] max-h-[150px]   
                 lg:min-w-[705px] lg:w-[705px] lg:max-w-[705px] 
                 min-w-[325px] w-[325px] max-w-[325px] resize rounded-[4px]"
