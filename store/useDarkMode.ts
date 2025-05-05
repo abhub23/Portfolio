@@ -1,31 +1,31 @@
-"use client";
+'use client';
 
-import { create } from "zustand";
+import { create } from 'zustand';
 
-interface DarkModeState {
-  isDarkMode: boolean;
-  toggleDarkMode: () => void;
-}
+type DarkModeType = {
+  isDarkmode: 'dark' | 'light';
+  toggleDarkmode: () => void;
+  initializeTheme: () => void;
+};
 
-const useDarkMode = create<DarkModeState>((set) => {
-  let initialMode = true
-  
-  if (typeof window !== "undefined") {
-    const storedPreference = localStorage.getItem("theme");
-    initialMode = storedPreference === "dark";
-    document.documentElement.classList.toggle("dark", initialMode);
-  }
+export const useDarkmode = create<DarkModeType>((set) => ({
+  isDarkmode: 'light',
 
-  return {
-    isDarkMode: initialMode,
-    toggleDarkMode: () =>
-      set((state) => {
-        const newMode = !state.isDarkMode;
-        localStorage.setItem("theme", newMode ? "dark" : "light");
-        document.documentElement.classList.toggle("dark", newMode);
-        return { isDarkMode: newMode };
-      }),
-  };
-});
+  initializeTheme: () => {
+    const storedPreference = localStorage.getItem('theme') as 'dark' | 'light' | null;
+    const prefersDark = storedPreference === 'dark';
 
-export default useDarkMode;
+    document.documentElement.classList.toggle('dark', prefersDark);
+    document.documentElement.style.overflowY = 'auto';
+
+    set({ isDarkmode: prefersDark ? 'dark' : 'light' });
+  },
+
+  toggleDarkmode: () =>
+    set((state) => {
+      const toggleTheme = state.isDarkmode === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', toggleTheme);
+      document.documentElement.classList.toggle('dark', toggleTheme === 'dark');
+      return { isDarkmode: toggleTheme };
+    }),
+}));
