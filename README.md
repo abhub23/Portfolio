@@ -34,10 +34,9 @@ export const useDarkmode = create<DarkModeType>((set) => ({
       return { isDarkmode: toggleTheme };
     }),
 }));
-
 ```
-Here in Zustand i cant use useEffect like ContextAPI because  `Zustand is not an react component like ContextAPI` so i created this toggleDarkmode function and make a seperate file called `DarkmodeProvider` which will wrap the main <App/> or {Children} in my React or Next App so changes will be applied globally.
 
+Here in Zustand i cant use useEffect like ContextAPI because `Zustand is not an react component like ContextAPI` so i created this toggleDarkmode function and make a seperate file called `DarkmodeProvider` which will wrap the main <App/> or {Children} in my React or Next App so changes will be applied globally.
 
 ```ts
 import { ReactNode, useEffect } from 'react';
