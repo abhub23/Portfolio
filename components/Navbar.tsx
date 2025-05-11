@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Link, Separator, Tooltip, IconButton } from '@radix-ui/themes';
+import { Link, Separator, Tooltip } from '@radix-ui/themes';
 import {
   GitHubLogoIcon,
   SunIcon,
@@ -24,7 +24,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
   return (
     <nav className="w-full py-6 flex justify-center fixed top-0 z-50">
-      <div className="rounded-full w-[800px] lg:w-[840px] hover:w-[860px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl transition-all duration-300">
+      <div className="rounded-full w-[800px] lg:w-[860px] hover:w-[860px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl ring ring-zinc-100 transition-all duration-300">
         <div className="flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all">
           <Link href="/" underline="none">
             <Tooltip content="Home">
@@ -74,7 +74,11 @@ const Navbar: React.FC = (): JSX.Element => {
             />
           </span>
 
-          <Link href="" target="_blank" underline="none">
+          <Link
+            href="https://drive.google.com/file/d/1ZZJzW-ZHYWPBD5enSKvXpvONWPzZl1JO/view?usp=drive_link"
+            target="_blank"
+            underline="none"
+          >
             <Tooltip content="Resume">
               <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
                 <FileIcon className="w-[19px] h-[19px] max-sm:h-[15px] max-sm:w-[15px] text-black dark:text-white" />
@@ -106,7 +110,7 @@ const Navbar: React.FC = (): JSX.Element => {
             </Tooltip>
           </Link>
 
-          <span className=" bg-black dark:bg-gray-400 h-full">
+          <span className="bg-black dark:bg-gray-400 h-full">
             <Separator
               orientation="vertical"
               size={{ sm: '1', lg: '2', xl: '2' }}
