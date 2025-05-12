@@ -25,12 +25,14 @@ const Connectwithme: React.FC = (): JSX.Element => {
   };
 
   const handleMessageSuccess = () => {
-    setEmail(''), setMessage('');
+    setEmail('');
+    setMessage('');
     toast.success('Your message has been sent');
   };
 
   const handleMessageError = () => {
-    setEmail(''), setMessage('');
+    setEmail('');
+    setMessage('');
     toast.error('Error while sending your message');
   };
 
@@ -44,12 +46,18 @@ const Connectwithme: React.FC = (): JSX.Element => {
       return;
     }
 
-    !validateEmail(email) ? toast.error('Enter a valid email address') : null;
+    if (!validateEmail(email)) {
+      toast.error('Enter a valid email address')
+    }
 
     try {
       const res = await axios.post('http://localhost:8000/api/sendmessage', { email, message });
       console.log(res.data.Success);
-      res.data.Success ? handleMessageSuccess() : handleMessageError();
+      if (res.data.Success) {
+        handleMessageSuccess();
+      } else {
+        handleMessageError();
+      }
     } catch (error) {
       console.log('Error occured while sending message', error);
     }
@@ -57,10 +65,10 @@ const Connectwithme: React.FC = (): JSX.Element => {
 
   return (
     <div
-      className={` ${Bricolage} lg:h-[420px] lg:w-[750px] h-[380px] flex flex-col items-start lg:ml-100 p-4`}
+      className={` ${Bricolage} lg:h-[460px] lg:w-[750px] h-[380px] flex flex-col items-start lg:ml-100 p-4`}
     >
       <div
-        className={`${Bricolage} lg:mb-5 mb-2 mx-auto lg:text-[34px] text-[24px] font-semibold `}
+        className={`lg:mb-5 mb-2 mx-auto lg:text-[34px] text-[24px] font-semibold `}
       >
         Connect with me
       </div>
@@ -68,7 +76,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
       <div className="flex mb-1 justify-start lg:gap-x-[12px] gap-x-[8px] p-1 lg:h-[50px] h-[40px] w-full">
         <button
           className="lg:h-[38px] h-[30px] bg-emerald-400 hover:bg-emerald-400/90 lg:text-[14px] text-[11px] font-medium p-[2px] lg:rounded-[6px] rounded-[4px] lg:w-[175px] w-[140px] flex text-black/80 dark:text-black/80 justify-center items-center cursor-pointer"
-          onClick={() => window.open('', '_blank')}
+          onClick={() => window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank')}
         >
           <GrSchedules className="text-center lg:text-[18px] text-[16px] mr-[5px]" />
           Schedule a Meeting
@@ -104,7 +112,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         value={message}
         className="border-black/70 focus:outline-none dark:border-white/70 bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[2px] border-1 overflow-hidden
                 min-h-[72px] h-[72px] max-h-[150px]   
-                lg:min-w-[705px] lg:w-[705px] lg:max-w-[705px] 
+                lg:min-w-[705px] lg:w-[705px] lg:max-w-[705px] lg:max-h-[130px]
                 min-w-[325px] w-[325px] max-w-[325px] resize rounded-[4px]"
       />
       <Toaster position="bottom-right" />
