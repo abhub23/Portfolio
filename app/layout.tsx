@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Theme } from '@radix-ui/themes';
+import Navbar from '@/components/Navbar';
 import { DarkmodeProvider } from '@/store/DarkmodeProvider';
 import '@radix-ui/themes/styles.css';
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://github.com/abhub23'),
@@ -42,14 +44,35 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`bg-white dark:bg-black`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  const theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (_) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="bg-white dark:bg-black">
         <DarkmodeProvider>
-          <Theme className="dark:!bg-black">{children}</Theme>
+          <Theme className="dark:!bg-black">
+            <Navbar />
+            {children}
+          </Theme>
         </DarkmodeProvider>
       </body>
     </html>
