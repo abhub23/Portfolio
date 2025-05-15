@@ -3,7 +3,11 @@
 import { ReactNode, useEffect } from 'react';
 import { useDarkmode } from '@/store/useDarkmode';
 
-export const DarkmodeProvider = ({ children }: { children: ReactNode }) => {
+type ChildType = {
+  children: ReactNode
+}
+
+export const DarkmodeProvider: React.FC<ChildType> = ({ children }) => {
   const initializeTheme = useDarkmode((state) => state.initializeTheme);
 
   useEffect(() => {
