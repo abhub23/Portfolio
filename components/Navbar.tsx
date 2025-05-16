@@ -24,7 +24,7 @@ const Navbar: React.FC = (): JSX.Element => {
 
   return (
     <nav className="w-full py-6 flex justify-center fixed top-0 z-50">
-      <div className="rounded-full w-[800px] lg:w-[860px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl ring ring-zinc-100 dark:ring-transparent transition-colors duration-300">
+      <div className="rounded-full lg:h-[54px] w-[800px] lg:w-[860px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl ring ring-zinc-100 dark:ring-transparent transition-colors duration-300">
         <div className="flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all">
           <Link href="/" underline="none">
             <Tooltip content="Home">
