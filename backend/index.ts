@@ -36,10 +36,10 @@ app.post('/api/sendmessage', async (req: Request, res: any) => {
     });
 
     await resend.emails.send({
-      from: email,
+      from: 'contact@abdullahtech.dev',
       to: 'abdullahmukri25@gmail.com',
       subject: `Hey Abdullah you got a message from ${email}`,
-      html: `<p>Hi Abdullah, you got a message from ${email} <strong>${message}</strong>!</p>`
+      html: `<p>Hi Abdullah, you got a message from ${email} <strong>${message}</strong>!</p>`,
     });
 
     return res.status(200).json({
