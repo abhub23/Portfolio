@@ -4,6 +4,8 @@ import cors from 'cors';
 import { prisma } from './lib/prisma';
 import { z } from 'zod';
 import { resend } from './lib/resend';
+import fs from 'fs/promises';
+import path from 'path';
 const Port = 8000;
 
 const app = express();
@@ -35,11 +37,19 @@ app.post('/api/sendmessage', async (req: Request, res: any) => {
       data: { email: email, message: message },
     });
 
+    const templatePath = path.join(__dirname, 'temp.html');
+    let htmlTemplate = await fs.readFile(templatePath, 'utf-8');
+    console.log(htmlTemplate)
+
+    htmlTemplate = htmlTemplate
+      .replace('{{email}}', email)
+      .replace('{{message}}', message);
+
     await resend.emails.send({
       from: 'contact@abdullahtech.dev',
       to: 'abdullahmukri25@gmail.com',
       subject: `Hey Abdullah you got a message from ${email}`,
-      html: `<p>Hi Abdullah, you got a message from ${email} <strong>${message}</strong>!</p>`,
+      html: htmlTemplate,
     });
 
     return res.status(200).json({
