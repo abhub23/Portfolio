@@ -91,8 +91,8 @@ const Connectwithme: React.FC = (): JSX.Element => {
         </button>
       </div>
 
-      <div className="p-[2px] font-normal font-stretch-ultra-condensed lg:text-[16px] text-[14px] ">
-        Email{' '}
+      <div className="lg:pb-[8px] p-[2px] font-stretch-ultra-condensed lg:text-[16px] text-[14px] ">
+        Email
       </div>
       <input
         type="text"
@@ -100,9 +100,9 @@ const Connectwithme: React.FC = (): JSX.Element => {
         required={true}
         onChange={(e) => setEmail(e.currentTarget.value)}
         value={email}
-        className="border-black/70 focus:outline-none dark:border-white/70 bg-white dark:bg-black lg:text-[15px] text-[12px] p-2 mb-[12px] lg:border-[2px] border-1 lg:h-[36px] h-[32px] lg:w-[705px] w-[325px] rounded-[4px]"
+        className="border-black focus:outline-none dark:border-white/60 bg-white dark:bg-black lg:text-[15px] text-[12px] p-2 mb-[12px] lg:border-[1px] border-1 lg:h-[38px] h-[32px] lg:w-[705px] w-[325px] rounded-[5px]"
       />
-      <div className="p-[2px] font-normal lg:text-[16px] text-[14px]">Message</div>
+      <div className="lg:pb-[8px] p-[2px] font-normal lg:text-[16px] text-[14px]">Message</div>
       <textarea
         onInput={handleInput}
         ref={textareaRef}
@@ -110,7 +110,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         required={true}
         onChange={(e) => setMessage(e.currentTarget.value)}
         value={message}
-        className="border-black/70 focus:outline-none dark:border-white/70 bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[2px] border-1 overflow-hidden
+        className="border-black focus:outline-none dark:border-white/60 bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[1px] border-1 overflow-hidden
                 min-h-[72px] h-[72px] max-h-[115px]   
                 lg:min-w-[705px] lg:w-[705px] lg:max-w-[705px] lg:max-h-[130px]
                 min-w-[325px] w-[325px] max-w-[325px] resize rounded-[4px]"
