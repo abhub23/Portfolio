@@ -3,6 +3,7 @@ import GithubBtn from './GithubBtn';
 import WebsiteBtn from './WebsiteBtn';
 import { Bricolage } from '@/utils/fonts';
 import { ShineBorder } from './magicui/shine-border';
+import Image from 'next/image';
 
 type Cardprops = {
   Title: string;
@@ -10,9 +11,10 @@ type Cardprops = {
   SrcLink: string;
   WebLink: string;
   Skills: string[];
+  Imglink?: string | undefined
 };
 
-const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills }): JSX.Element => {
+const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }): JSX.Element => {
   return (
     <article className="relative flex lg:w-[340px] w-[330px] flex-col items-center justify-between border-[1px] rounded-sm  border-zinc-300/80 dark:border-zinc-800 bg-white dark:bg-black p-6 ">
       {/*<ShineBorder className='rounded-sm' shineColor={['oklch(64.5% 0.246 16.439)','oklch(85.2% 0.199 91.936)','oklch(76.8% 0.233 130.85)']} />*/}
@@ -25,14 +27,19 @@ const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills }): J
         ]}
       />
       <div className="group w-[320px] relative">
-        <h3
-          className={` mt-3 text-2xl font-black ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
-        >
-          <a href={WebLink}>
-            <span className={`absolute inset-0 max-w-xs  ${Bricolage}`} />
-            {Title}
-          </a>
-        </h3>
+        <div className='flex justify-around items-center'>
+          <h3
+            className={` lg:w-fit mt-[4px] text-[24px] justify-start font-black ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
+          >
+            <a href={WebLink}>
+              <span className={`absolute inset-0 max-w-xs  ${Bricolage}`} />
+              {Title}
+            </a>
+          </h3>
+          <Image alt='' src={Imglink} width={50} height={50} />
+        </div>
+
+        
         <p
           className={`text-[13px] mt-5 px-2 text-black dark:text-white text-justify transition-all duration-500 ease-in-out transform ${Bricolage} `}
         >

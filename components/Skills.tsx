@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
             <div className={`lg:h-[110px] h-[90px] lg:w-[660px] w-[325px] lg:px-[4px] gap-[2px] px-[2px] flex flex-wrap justify-center mx-auto ${Bricolage}`}>
                 {skills.map((el, idx) => (
                     <div key={idx}
-                        className="lg:px-[6px] px-[4px] lg:p-[2px] p-[2px] lg:mx-[5px] mx-[4px] font-semibold lg:h-[24px] h-[18px] text-center rounded-[4px] bg-black/90 dark:bg-white text-white dark:text-black lg:text-[12px] text-[8px] border-1 border-black/80 dark:border-white/80 cursor-pointer">
+                        className="lg:px-[8px] px-[4px] lg:p-[2px] p-[2px] lg:mx-[5px] mx-[4px] font-semibold lg:h-[24px] h-[18px] text-center rounded-[4px] bg-black/90 dark:bg-white text-white dark:text-black lg:text-[12px] text-[8px] border-1 border-black/80 dark:border-white/80 cursor-pointer">
                         {el}
                     </div>
 
