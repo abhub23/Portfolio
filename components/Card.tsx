@@ -11,7 +11,7 @@ type Cardprops = {
   SrcLink: string;
   WebLink: string;
   Skills: string[];
-  Imglink?: string | undefined
+  Imglink: React.HTMLInputTypeAttribute;
 };
 
 const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }): JSX.Element => {
@@ -27,16 +27,16 @@ const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills, Imgl
         ]}
       />
       <div className="group w-[320px] relative">
-        <div className='flex justify-around items-center'>
+        <div className='flex justify-start items-center'>
           <h3
-            className={` lg:w-fit mt-[4px] text-[24px] justify-start font-black ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
+            className={` lg:w-fit mt-[4px] text-[24px]  font-black ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
           >
             <a href={WebLink}>
               <span className={`absolute inset-0 max-w-xs  ${Bricolage}`} />
               {Title}
             </a>
           </h3>
-          <Image alt='' src={Imglink} width={50} height={50} />
+          <Image alt='' src={Imglink} width={50} height={50} className='absolute right-[10px] ' />
         </div>
 
         
