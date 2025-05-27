@@ -29,14 +29,14 @@ const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills, Imgl
       <div className="group w-[320px] relative">
         <div className='flex justify-start items-center'>
           <h3
-            className={` lg:w-fit mt-[4px] text-[24px]  font-black ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
+            className={` lg:w-fit mt-[4px] text-[22px] font-bold ml-[8px] uppercase leading-6 text-black dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-rose-600  ${Bricolage}`}
           >
             <a href={WebLink}>
               <span className={`absolute inset-0 max-w-xs  ${Bricolage}`} />
               {Title}
             </a>
           </h3>
-          <Image alt='' src={Imglink} width={50} height={50} className='absolute right-[10px] ' />
+          <Image alt='' src={Imglink} width={45} height={45} className='absolute right-[10px] cursor-pointer' onClick={() => window.open(WebLink, '_blank')} />
         </div>
 
         
@@ -47,18 +47,18 @@ const Card: React.FC<Cardprops> = ({ Title, Desc, SrcLink, WebLink, Skills, Imgl
         </p>
       </div>
 
-      <div className="flex w-[330] gap-[2px] gap-y-[4px] px-3 mt-6 flex-wrap">
+      <div className="flex w-[330] gap-[4px] gap-y-[5px] px-3 mt-6 flex-wrap">
         {Skills.map((el) => (
           <p
             key={el}
-            className={`text-[11px] rounded-[3px] ml-[2px] p-[2px] px-[4px] border-1 border-black/50 dark:border-white/90 h-[20px] text-black dark:text-white hover:dark:text-black hover:text-white hover:bg-black dark:hover:bg-white transition-all duration-300 ease-in-out cursor-pointer ${Bricolage}`}
+            className={`text-[11px] rounded-[3px] ml-[2px] p-[2px] px-[4px] border-1 border-neutral-500 dark:border-neutral-500 h-[20px] text-black dark:text-white hover:dark:text-black hover:text-white hover:bg-black dark:hover:bg-white transition-all duration-300 ease-in-out cursor-pointer ${Bricolage}`}
           >
             {el}
           </p>
         ))}
       </div>
 
-      <div className="mt-10 mr-[130px] flex gap-x-2 text-xs">
+      <div className="mt-[30px] mr-[130px] flex gap-x-2 text-xs">
         <GithubBtn Srclink={SrcLink} />
         <WebsiteBtn Weblink={WebLink} />
       </div>
