@@ -4,11 +4,11 @@ import { Bricolage } from '@/utils/fonts';
 const Footer = () => {
   return (
     <div
-      className={`h-10 bg-transparent lg:text-[16px] text-[12px] flex justify-center items-center mb-2 dark:text-white ${Bricolage}`}
+      className={`mb-2 flex h-10 items-center justify-center bg-transparent text-[12px] lg:text-[16px] dark:text-white ${Bricolage}`}
     >
       Designed and Developed by
       <Link
-        className="text-transparent ml-1"
+        className="ml-1 text-transparent"
         style={{
           background:
             'linear-gradient(to right, oklch(71.8% 0.202 349.761), oklch(74% 0.238 322.16), oklch(70.2% 0.183 293.541))',

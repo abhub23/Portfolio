@@ -1,25 +1,52 @@
-import { Bricolage } from "@/utils/fonts"
+import { Bricolage } from '@/utils/fonts';
 
-const skills: Array<string> = ['TypeScript', 'Javascript', 'Next Js', 'React', 'Express', 'Node Js', 'Tailwind', 'PostgreSQL', 'Prisma', 'Supabase', 
-    'Neon DB', 'Zustand', 'Zod', 'Resend', 'Socket.IO', 'TurboRepo', 'Git', 'AWS EC2', 'AWS S3', 'JWT', 'Docker', 'Vercel']
-
+const skills: Array<string> = [
+  'TypeScript',
+  'Javascript',
+  'Next Js',
+  'React',
+  'Express',
+  'Node Js',
+  'Tailwind',
+  'PostgreSQL',
+  'Prisma',
+  'Supabase',
+  'Neon DB',
+  'Zustand',
+  'Zod',
+  'Resend',
+  'Socket.IO',
+  'TurboRepo',
+  'Git',
+  'AWS EC2',
+  'AWS S3',
+  'JWT',
+  'Docker',
+  'Vercel',
+];
 
 const Skills: React.FC = () => {
-    return (
-        <div className={`lg:h-[160px] h-[110px] lg:w-[660px] w-[340px] lg:mb-[40px] mb-[40px] mx-auto ${Bricolage}`}>
+  return (
+    <div
+      className={`mx-auto mb-[40px] h-[110px] w-[340px] lg:mb-[40px] lg:h-[160px] lg:w-[660px] ${Bricolage}`}
+    >
+      <div className="mx-auto mb-[10px] text-center text-[24px] font-semibold text-black lg:mb-[18px] lg:p-[2px] lg:text-[34px] dark:text-white">
+        Skills
+      </div>
+      <div
+        className={`mx-auto flex h-[90px] w-[325px] flex-wrap justify-center gap-[2px] px-[2px] lg:h-[110px] lg:w-[660px] lg:px-[4px] ${Bricolage}`}
+      >
+        {skills.map((el, idx) => (
+          <div
+            key={idx}
+            className="mx-[4px] h-[18px] cursor-pointer rounded-[4px] border-1 border-black/80 bg-black/90 p-[2px] px-[4px] text-center text-[8px] font-semibold text-white lg:mx-[5px] lg:h-[24px] lg:p-[2px] lg:px-[8px] lg:text-[12px] dark:border-white/80 dark:bg-white dark:text-black"
+          >
+            {el}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-            <div className="lg:text-[34px] text-[24px] text-black dark:text-white font-semibold mx-auto text-center lg:mb-[18px] mb-[10px] lg:p-[2px]">Skills</div>
-            <div className={`lg:h-[110px] h-[90px] lg:w-[660px] w-[325px] lg:px-[4px] gap-[2px] px-[2px] flex flex-wrap justify-center mx-auto ${Bricolage}`}>
-                {skills.map((el, idx) => (
-                    <div key={idx}
-                        className="lg:px-[8px] px-[4px] lg:p-[2px] p-[2px] lg:mx-[5px] mx-[4px] font-semibold lg:h-[24px] h-[18px] text-center rounded-[4px] bg-black/90 dark:bg-white text-white dark:text-black lg:text-[12px] text-[8px] border-1 border-black/80 dark:border-white/80 cursor-pointer">
-                        {el}
-                    </div>
-
-                ))}
-            </div>
-        </div>
-    )
-}
-
-export default Skills
+export default Skills;

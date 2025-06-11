@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { Link, Separator, Tooltip } from '@radix-ui/themes';
@@ -23,14 +23,14 @@ const Navbar: React.FC = (): JSX.Element => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full py-6 flex justify-center fixed top-0 z-50">
-      <div className="rounded-full lg:h-[54px] w-[800px] lg:w-[860px] max-[400px]:w-[345px]  max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white/10 dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 backdrop-blur-lg border-1/70 dark:border-white/20 flex items-center justify-center dark:shadow-none shadow-xl ring ring-zinc-100 dark:ring-transparent transition-colors duration-300">
-        <div className="flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all">
+    <nav className="fixed top-0 z-50 flex w-full justify-center py-6">
+      <div className="dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 border-1/70 flex w-[800px] items-center justify-center rounded-full bg-white/10 px-2 py-1 shadow-xl ring ring-zinc-100 backdrop-blur-lg transition-colors duration-300 max-[450px]:w-[400px] max-[400px]:w-[345px] max-[350px]:w-[330px] max-[321px]:w-[310px] lg:h-[54px] lg:w-[860px] dark:border-white/20 dark:shadow-none dark:ring-transparent">
+        <div className="flex items-center justify-center gap-8 px-2 transition-all max-[450px]:gap-5 max-[400px]:gap-4 max-sm:gap-4">
           <Link href="/" underline="none">
             <Tooltip content="Home">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300 mt-1">
+              <div className="mt-1 rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <HomeIcon
-                  className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname == '/' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}
+                  className={`h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
                 />
               </div>
             </Tooltip>
@@ -38,9 +38,9 @@ const Navbar: React.FC = (): JSX.Element => {
 
           <Link href="/projects">
             <Tooltip content="Projects">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <CodeIcon
-                  className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname == '/projects' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}
+                  className={`h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/projects' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
                 />
               </div>
             </Tooltip>
@@ -48,9 +48,9 @@ const Navbar: React.FC = (): JSX.Element => {
 
           <Link href="/blogs">
             <Tooltip content="Blog">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <RowsIcon
-                  className={`w-[16px] h-[16px] max-sm:w-[13px] max-sm:h-[13px] text-black dark:text-white ${pathname.startsWith('/blogs') ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}
+                  className={`h-[16px] w-[16px] text-black max-sm:h-[13px] max-sm:w-[13px] dark:text-white ${pathname.startsWith('/blogs') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
                 />
               </div>
             </Tooltip>
@@ -58,15 +58,15 @@ const Navbar: React.FC = (): JSX.Element => {
 
           <Link href="/about">
             <Tooltip content="About">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <IoPerson
-                  className={`w-[18px] h-[18px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname == '/about' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}
+                  className={`h-[18px] w-[18px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/about' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
                 />
               </div>
             </Tooltip>
           </Link>
 
-          <span className=" bg-black dark:bg-gray-400 h-full">
+          <span className="h-full bg-black dark:bg-gray-400">
             <Separator
               orientation="vertical"
               size={{ sm: '1', lg: '2', xl: '2' }}
@@ -80,37 +80,37 @@ const Navbar: React.FC = (): JSX.Element => {
             underline="none"
           >
             <Tooltip content="Resume">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
-                <FileIcon className="w-[19px] h-[19px] max-sm:h-[15px] max-sm:w-[15px] text-black dark:text-white" />
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
+                <FileIcon className="h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white" />
               </div>
             </Tooltip>
           </Link>
 
           <Link href="https://github.com/abhub23" target="_blank">
             <Tooltip content="Github">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
-                <GitHubLogoIcon className="w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white" />
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
+                <GitHubLogoIcon className="h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white" />
               </div>
             </Tooltip>
           </Link>
 
           <Link href="https://x.com/abdullah_twt23" target="_blank">
             <Tooltip content="X">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
-                <FaXTwitter className="w-[17px] h-[17px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white" />
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
+                <FaXTwitter className="h-[17px] w-[17px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white" />
               </div>
             </Tooltip>
           </Link>
 
           <Link href="https://www.linkedin.com/in/abdullah-mukri-84a56b220/" target="_blank">
             <Tooltip content="Linkedin">
-              <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
-                <LinkedInLogoIcon className="w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white" />
+              <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
+                <LinkedInLogoIcon className="h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white" />
               </div>
             </Tooltip>
           </Link>
 
-          <span className="bg-black dark:bg-gray-400 h-full">
+          <span className="h-full bg-black dark:bg-gray-400">
             <Separator
               orientation="vertical"
               size={{ sm: '1', lg: '2', xl: '2' }}
@@ -119,15 +119,15 @@ const Navbar: React.FC = (): JSX.Element => {
           </span>
 
           <div
-            className="hover:px-3 max-sm:hover:px-2 py-2.5 rounded-full transition-all duration-300"
+            className="rounded-full py-2.5 transition-all duration-300 hover:px-3 max-sm:hover:px-2"
             onClick={toggleDarkmode}
           >
             <div className="flex items-center">
               <button>
                 {isDarkmode == 'dark' ? (
-                  <MoonIcon className="w-[18px] h-[18px] max-sm:w-[14px] max-sm:h-[14px] text-white cursor-pointer" />
+                  <MoonIcon className="h-[18px] w-[18px] cursor-pointer text-white max-sm:h-[14px] max-sm:w-[14px]" />
                 ) : (
-                  <SunIcon className="w-5 h-5 max-sm:w-[15px] max-sm:h-[15px] cursor-pointer" />
+                  <SunIcon className="h-5 w-5 cursor-pointer max-sm:h-[15px] max-sm:w-[15px]" />
                 )}
               </button>
             </div>

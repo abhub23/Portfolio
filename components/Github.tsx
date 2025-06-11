@@ -4,8 +4,8 @@ import type { JSX } from 'react';
 
 const Github: React.FC = (): JSX.Element => {
   return (
-    <div className="flex flex-col p-3 items-center lg:mb-10 mb-2 lg:mt-14 mt-8">
-      <p className={`${Bricolage} lg:mb-5 mb-2 lg:text-[34px] text-[24px] font-semibold `}>
+    <div className="mt-8 mb-2 flex flex-col items-center p-3 lg:mt-14 lg:mb-10">
+      <p className={`${Bricolage} mb-2 text-[24px] font-semibold lg:mb-5 lg:text-[34px]`}>
         Github Contributions
       </p>
       <Image

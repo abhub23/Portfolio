@@ -1,9 +1,9 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { JSX } from 'react';
 import { Bricolage } from '@/utils/fonts';
-import { useEmail, useMessage } from '@/store/Connectwithme';
+import { useEmail, useMessage, useSendMessage } from '@/store/Connectwithme';
 import axios from 'axios';
 import { FaXTwitter } from 'react-icons/fa6';
 import { GrSchedules } from 'react-icons/gr';
@@ -13,6 +13,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
   //const { name, setName } = useName()
   const { email, setEmail } = useEmail();
   const { message, setMessage } = useMessage();
+  const {sendMessage, setSendMessage} = useSendMessage()
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -25,9 +26,9 @@ const Connectwithme: React.FC = (): JSX.Element => {
   };
 
   const handleMessageSuccess = () => {
+    toast.success('Your message has been sent');
     setEmail('');
     setMessage('');
-    toast.success('Your message has been sent');
   };
 
   const handleMessageError = () => {
@@ -40,6 +41,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   };
+
   const handleMessage = async () => {
     if (email == '' || message == '') {
       toast.error('Oops! Input fields are missing.');
@@ -47,13 +49,16 @@ const Connectwithme: React.FC = (): JSX.Element => {
     }
 
     if (!validateEmail(email)) {
-      toast.error('Enter a valid email address')
+      toast.error('Enter a valid email address');
+      return
     }
 
     try {
+      setSendMessage(true)
       const res = await axios.post('http://localhost:8000/api/sendmessage', { email, message });
       console.log(res.data.Success);
       if (res.data.Success) {
+        setSendMessage(false)
         handleMessageSuccess();
       } else {
         handleMessageError();
@@ -65,33 +70,33 @@ const Connectwithme: React.FC = (): JSX.Element => {
 
   return (
     <div
-      className={` ${Bricolage} lg:h-[460px] lg:w-[750px] h-[380px] flex flex-col items-start lg:ml-100 p-4`}
+      className={` ${Bricolage} flex h-[380px] flex-col items-start p-4 lg:ml-100 lg:h-[460px] lg:w-[750px]`}
     >
-      <div
-        className={`lg:mb-5 mb-2 mx-auto lg:text-[34px] text-[24px] font-semibold `}
-      >
+      <div className={`mx-auto mb-2 text-[24px] font-semibold lg:mb-5 lg:text-[34px]`}>
         Connect with me
       </div>
 
-      <div className="flex mb-1 justify-start lg:gap-x-[12px] gap-x-[8px] p-1 lg:h-[50px] h-[40px] w-full">
+      <div className="mb-1 flex h-[40px] w-full justify-start gap-x-[8px] p-1 lg:h-[50px] lg:gap-x-[12px]">
         <button
-          className="lg:h-[38px] h-[30px] bg-emerald-400 hover:bg-emerald-400/90 lg:text-[14px] text-[11px] font-medium p-[2px] lg:rounded-[6px] rounded-[4px] lg:w-[175px] w-[140px] flex text-black/80 dark:text-black/80 justify-center items-center cursor-pointer"
-          onClick={() => window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank')}
+          className="flex h-[30px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-emerald-400 p-[2px] text-[11px] font-medium text-black/80 hover:bg-emerald-400/90 lg:h-[38px] lg:w-[175px] lg:rounded-[6px] lg:text-[14px] dark:text-black/80"
+          onClick={() =>
+            window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank')
+          }
         >
-          <GrSchedules className="text-center lg:text-[18px] text-[16px] mr-[5px]" />
+          <GrSchedules className="mr-[5px] text-center text-[16px] lg:text-[18px]" />
           Schedule a Meeting
         </button>
 
         <button
-          className="lg:h-[38px] h-[30px] lg:text-[14px] text-[11px] font-medium p-[2px] bg-blue-400 hover:bg-blue-400/95 text-white/90 dark:text-white/80 lg:rounded-[6px] rounded-[4px] lg:w-[140px] w-[120px] flex justify-center items-center cursor-pointer"
+          className="flex h-[30px] w-[120px] cursor-pointer items-center justify-center rounded-[4px] bg-blue-400 p-[2px] text-[11px] font-medium text-white/90 hover:bg-blue-400/95 lg:h-[38px] lg:w-[140px] lg:rounded-[6px] lg:text-[14px] dark:text-white/80"
           onClick={() => window.open('https://x.com/abdullah_twt23', '_black')}
         >
-          <FaXTwitter className="text-center lg:text-[18px] text-[16px] mr-[4px] " />
+          <FaXTwitter className="mr-[4px] text-center text-[16px] lg:text-[18px]" />
           Chat on Twitter
         </button>
       </div>
 
-      <div className="lg:pb-[8px] p-[2px] font-stretch-ultra-condensed lg:text-[16px] text-[14px] ">
+      <div className="p-[2px] text-[14px] font-stretch-ultra-condensed lg:pb-[8px] lg:text-[16px]">
         Email
       </div>
       <input
@@ -100,9 +105,9 @@ const Connectwithme: React.FC = (): JSX.Element => {
         required={true}
         onChange={(e) => setEmail(e.currentTarget.value)}
         value={email}
-        className="border-black focus:outline-none dark:border-white/60 bg-white dark:bg-black lg:text-[15px] text-[12px] p-2 mb-[12px] lg:border-[1px] border-1 lg:h-[38px] h-[32px] lg:w-[705px] w-[325px] rounded-[5px]"
+        className="mb-[12px] h-[32px] w-[325px] rounded-[5px] border-1 border-black bg-white p-2 text-[12px] focus:outline-none lg:h-[38px] lg:w-[705px] lg:border-[1px] lg:text-[15px] dark:border-white/60 dark:bg-black"
       />
-      <div className="lg:pb-[8px] p-[2px] font-normal lg:text-[16px] text-[14px]">Message</div>
+      <div className="p-[2px] text-[14px] font-normal lg:pb-[8px] lg:text-[16px]">Message</div>
       <textarea
         onInput={handleInput}
         ref={textareaRef}
@@ -110,17 +115,15 @@ const Connectwithme: React.FC = (): JSX.Element => {
         required={true}
         onChange={(e) => setMessage(e.currentTarget.value)}
         value={message}
-        className="border-black focus:outline-none dark:border-white/60 bg-white dark:bg-black lg:text-[15px] text-[12px] lg:mb-[20px] mb-[15px] p-2 lg:border-[1px] border-1 overflow-hidden
-                min-h-[72px] h-[72px] max-h-[115px]   
-                lg:min-w-[705px] lg:w-[705px] lg:max-w-[705px] lg:max-h-[130px]
-                min-w-[325px] w-[325px] max-w-[325px] resize rounded-[4px]"
+        className="mb-[15px] h-[72px] max-h-[115px] min-h-[72px] w-[325px] max-w-[325px] min-w-[325px] resize overflow-hidden rounded-[4px] border-1 border-black bg-white p-2 text-[12px] focus:outline-none lg:mb-[20px] lg:max-h-[130px] lg:w-[705px] lg:max-w-[705px] lg:min-w-[705px] lg:border-[1px] lg:text-[15px] dark:border-white/60 dark:bg-black"
       />
       <Toaster position="bottom-right" />
       <button
-        className="border-black bg-black dark:bg-white dark:border-white lg:text-[14px] tracking-wide text-[12px] text-white dark:text-black border-2 h-9 lg:w-[705px] w-[325px] rounded-[4px] mt-1 cursor-pointer hover:bg-stone-900 dark:hover:bg-gray-100"
+        className="mt-1 h-9 w-[325px] cursor-pointer rounded-[4px] border-2 border-black bg-black text-[12px] tracking-wide text-white hover:bg-stone-900 lg:w-[705px] lg:text-[14px] dark:border-white dark:bg-white dark:text-black dark:hover:bg-gray-100"
         onClick={handleMessage}
+        disabled={sendMessage}
       >
-        Send Message
+        {sendMessage ? 'Sending...': 'Send Message'}
       </button>
     </div>
   );
