@@ -22,15 +22,16 @@ const UserSchema = z.object({
 });
 
 const getDate = () => {
-  const date = new Date().toDateString()
-  const arr = date.split(" ")
-  arr[0] = arr[0] + ","
-  return arr.join(' ')
-}
+  const date = new Date().toDateString();
+  const arr = date.split(' ');
+  arr[0] = arr[0] + ',';
+  return arr.join(' ');
+};
+
 //Server check
-app.get('/', (req,res) => {
-  res.json({message: 'Server is alive'})
-})
+app.get('/', (_, res) => {
+  res.json({ message: 'Server is alive' });
+});
 
 app.post('/api/sendmessage', async (req: Request, res: any) => {
   const InputValidation = UserSchema.safeParse(req.body);
@@ -55,7 +56,7 @@ app.post('/api/sendmessage', async (req: Request, res: any) => {
       .replace('{{email}}', email)
       .replace('{{email}}', email)
       .replace('{{message}}', message)
-      .replace('{{date}}', getDate())
+      .replace('{{date}}', getDate());
 
     await resend.emails.send({
       from: 'contact@abdullahtech.dev',
