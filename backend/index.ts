@@ -21,6 +21,17 @@ const UserSchema = z.object({
   message: z.string(),
 });
 
+const getDate = () => {
+  const date = new Date().toDateString()
+  const arr = date.split(" ")
+  arr[0] = arr[0] + ","
+  return arr.join(' ')
+}
+//Server check
+app.get('/', (req,res) => {
+  res.json({message: 'Server is alive'})
+})
+
 app.post('/api/sendmessage', async (req: Request, res: any) => {
   const InputValidation = UserSchema.safeParse(req.body);
 
@@ -39,11 +50,12 @@ app.post('/api/sendmessage', async (req: Request, res: any) => {
 
     const templatePath = path.join(__dirname, 'temp.html');
     let htmlTemplate = await fs.readFile(templatePath, 'utf-8');
-    console.log(htmlTemplate)
 
     htmlTemplate = htmlTemplate
       .replace('{{email}}', email)
-      .replace('{{message}}', message);
+      .replace('{{email}}', email)
+      .replace('{{message}}', message)
+      .replace('{{date}}', getDate())
 
     await resend.emails.send({
       from: 'contact@abdullahtech.dev',
