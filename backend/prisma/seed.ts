@@ -17,13 +17,13 @@ any non-unique field try to insert in for Example: E-mail field
 import { PrismaClient, Prisma } from '@prisma/client';
 const prisma = new PrismaClient();
 
-const main = async() =>  {
+const main = async () => {
   try {
-     await prisma.users.create({
-    data: { id: 1, email: 'test@gmail.com', message: 'testing' },
+    await prisma.users.create({
+      data: { id: 1, email: 'test@gmail.com', message: 'testing' },
     });
     console.log('prisma init data');
-  } catch (error) {
+  } catch (error: unknown) {
     if (error instanceof Prisma.PrismaClientKnownRequestError) {
       if (error.code === 'P2002') {
         // Unique constraint violation
@@ -34,11 +34,9 @@ const main = async() =>  {
     } else {
       console.error('Unexpected error:', error);
     }
-  } finally{
+  } finally {
     await prisma.$disconnect();
   }
-  
-}
+};
 
-main()
-
+main();

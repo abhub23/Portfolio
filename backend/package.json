@@ -3,27 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec ts-node index.ts"
+    "start": "node index.js",
+    "build": "prisma generate && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "@prisma/client": "^6.6.0",
+    "@prisma/client": "^6.9.0",
     "@types/axios": "^0.14.4",
     "@types/cors": "^2.8.17",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "prisma": "^6.6.0",
-    "resend": "^4.5.0",
+    "prisma": "^6.9.0",
+    "resend": "^4.5.2",
     "zod": "^3.24.3"
   },
   "devDependencies": {
