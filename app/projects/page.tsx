@@ -1,26 +1,27 @@
-'use client'
+'use client';
 
 import Card from '@/components/Card';
 import { Bricolage } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
-import { motion } from 'motion/react'
+import { motion } from 'motion/react';
 
 const Projects: React.FC = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30,  filter: 'blur(8px)' }}
-      animate={{ opacity: 1, y: 0,  filter: 'blur(0px)' }}
+      initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}>
+      className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}
+    >
       <p
-        className={`lg:text-[32px] text-[26px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} font-semibold flex justify-center p-2 lg:mb-4  ${Bricolage}`}
+        className={`text-[26px] lg:text-[32px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
       >
         {' '}
         Projects
       </p>
-      <div className="grid lg:grid-cols-2 gap-4 lg:mx-104 justify-center">
+      <div className="grid justify-center gap-4 lg:mx-104 lg:grid-cols-2">
         <Card
           Title="Chathub"
           Desc="Chathub is a fast, secure private chat app powered by Socket.IO. Instantly connect, message friends, and enjoy real-time private conversations with no distractions. Simple, smooth, and built for people who value privacy and speed."
@@ -37,7 +38,7 @@ const Projects: React.FC = () => {
             'Golang',
             'Vercel',
           ]}
-          Imglink='/chat.png'
+          Imglink="/chat.png"
         />
 
         <Card
@@ -45,16 +46,8 @@ const Projects: React.FC = () => {
           Desc="Now you can Compare your Github Stats with the best in the world, be it Torvalds, Karpathy, Harkirat and who not. You think you're doing your best? have better PR's than someone? Lets see here mate."
           SrcLink="https://github.com/abhub23/Github-Metrics"
           WebLink="https://githubstats.abdullahtech.dev"
-          Skills={[
-            'Typescript',
-            'React',
-            'Express',
-            'TailwindCSS',
-            'Vite',
-            'Gemini',
-            'Zustand',
-          ]}
-          Imglink='/githublogo.png'
+          Skills={['Typescript', 'React', 'Express', 'TailwindCSS', 'Vite', 'Gemini', 'Zustand']}
+          Imglink="/githublogo.png"
         />
 
         <Card
@@ -69,9 +62,9 @@ const Projects: React.FC = () => {
             'next - themes',
             'grids',
             'Vercel',
-            'Zustand'
+            'Zustand',
           ]}
-          Imglink='/flipgame.webp'
+          Imglink="/flipgame.webp"
         />
 
         <Card
@@ -89,7 +82,7 @@ const Projects: React.FC = () => {
             'Gemini API',
             'Docker',
           ]}
-          Imglink='/chat.png'
+          Imglink="/chat.png"
         />
 
         <Card
@@ -107,7 +100,7 @@ const Projects: React.FC = () => {
             'Gemini API',
             'Docker',
           ]}
-          Imglink='/chat.png'
+          Imglink="/chat.png"
         />
 
         <Card
@@ -125,7 +118,7 @@ const Projects: React.FC = () => {
             'Gemini API',
             'Docker',
           ]}
-          Imglink='/chat.png'
+          Imglink="/chat.png"
         />
       </div>
     </motion.div>

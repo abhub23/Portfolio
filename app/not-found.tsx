@@ -12,19 +12,19 @@ const ErrorPage = () => {
 
   return (
     <div
-      className={`${Bricolage} bg-white dark:bg-black font-semibold flex flex-col justify-center items-center h-screen`}
+      className={`${Bricolage} flex h-screen flex-col items-center justify-center bg-white font-semibold dark:bg-black`}
     >
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="flex flex-col justify-center items-center"
+        className="flex flex-col items-center justify-center"
       >
-        <p className="lg:text-[36px] text-[22px] text-black dark:text-white p-2 mb-1.5">
+        <p className="mb-1.5 p-2 text-[22px] text-black lg:text-[36px] dark:text-white">
           PAGE NOT FOUND - 404{' '}
         </p>
         <button
-          className="px-3 py-2 p-2 rounded-md lg:h-[36px] lg:w-[120px] h-[28px] w-[100px] bg-black text-white cursor-pointer lg:text-[14px] text-[10px] dark:bg-white dark:text-black "
+          className="h-[28px] w-[100px] cursor-pointer rounded-md bg-black p-2 px-3 py-2 text-[10px] text-white lg:h-[36px] lg:w-[120px] lg:text-[14px] dark:bg-white dark:text-black"
           onClick={handleHome}
         >
           Go to Home

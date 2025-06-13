@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { JSX } from 'react';
 import { Bricolage } from '@/utils/fonts';
 import { useEmail, useMessage, useSendMessage } from '@/store/Connectwithme';
@@ -13,7 +13,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
   //const { name, setName } = useName()
   const { email, setEmail } = useEmail();
   const { message, setMessage } = useMessage();
-  const {sendMessage, setSendMessage} = useSendMessage()
+  const { sendMessage, setSendMessage } = useSendMessage();
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -50,15 +50,15 @@ const Connectwithme: React.FC = (): JSX.Element => {
 
     if (!validateEmail(email)) {
       toast.error('Enter a valid email address');
-      return
+      return;
     }
 
     try {
-      setSendMessage(true)
+      setSendMessage(true);
       const res = await axios.post('http://localhost:8000/api/sendmessage', { email, message });
       console.log(res.data.Success);
       if (res.data.Success) {
-        setSendMessage(false)
+        setSendMessage(false);
         handleMessageSuccess();
       } else {
         handleMessageError();
@@ -123,7 +123,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         onClick={handleMessage}
         disabled={sendMessage}
       >
-        {sendMessage ? 'Sending...': 'Send Message'}
+        {sendMessage ? 'Sending...' : 'Send Message'}
       </button>
     </div>
   );

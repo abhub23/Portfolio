@@ -13,13 +13,13 @@ export default function Home() {
     <>
       <motion.div
         initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
-        animate={{ opacity: 1, y: 0, filter: 'blur(0px)'  }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.4, ease: 'easeOut' }}
       >
         <Introsec />
         <Projects />
         <Github />
-        <Skills/>
+        <Skills />
         <Connectwithme />
         <Footer />
       </motion.div>

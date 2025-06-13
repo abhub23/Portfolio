@@ -5,10 +5,13 @@ import Navbar from '@/components/Navbar';
 import { DarkmodeProvider } from '@/store/DarkmodeProvider';
 import '@radix-ui/themes/styles.css';
 
-
 export const metadata: Metadata = {
-  metadataBase: new URL('https://github.com/abhub23'),
+  metadataBase: new URL('https://abdullahtech.dev'),
   title: 'Abdullah',
+  icons: {
+    icon: "/bg.png",
+    
+  },
   description:
     "Abdullah Mukri is a Software Engineer and a Fullstack Developer who's expertize are in Building Scalable and Robust Maintainable Products from Scratch",
   keywords: [
@@ -42,11 +45,7 @@ export const metadata: Metadata = {
   category: 'Portfolio Website',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
