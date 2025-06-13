@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "echo 'Skipping lint on Vercel'",
+    "lint": "next lint",
     "fmt": "prettier -w ."
   },
   "dependencies": {
@@ -16,7 +16,6 @@
     "axios": "^1.8.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "express": "^5.1.0",
     "lucide-react": "^0.487.0",
     "monorepo": "github:radix-ui/themes",
     "motion": "^12.6.5",
