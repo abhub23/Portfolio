@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode, useEffect } from 'react';
-import { useDarkmode } from '@/store/useDarkmode';
+import { useDarkmode } from './useDarkmode';
 
 type ChildType = {
   children: ReactNode;
