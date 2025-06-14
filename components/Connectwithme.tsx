@@ -55,7 +55,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
 
     try {
       setSendMessage(true);
-      const res = await axios.post('http://localhost:8000/api/sendmessage', { email, message });
+      const res = await axios.post('https://portfolio-backend-ten-ebon.vercel.app/api/sendmessage', { email, message });
       console.log(res.data.Success);
       if (res.data.Success) {
         setSendMessage(false);

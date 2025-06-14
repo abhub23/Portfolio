@@ -4,7 +4,7 @@ import { Bricolage } from '@/utils/fonts';
 const Footer = () => {
   return (
     <div
-      className={`mb-2 flex h-10 items-center justify-center bg-transparent text-[12px] lg:text-[16px] dark:text-white ${Bricolage}`}
+      className={`mb-1 flex h-10 items-center justify-center bg-transparent text-[12px] lg:text-[16px] dark:text-white ${Bricolage}`}
     >
       Designed and Developed by
       <Link
