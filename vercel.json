@@ -1,4 +1,0 @@
-{
-  "ignoreCommand": "echo Skipping backend during Next.js build",
-  "buildCommand": "pnpm build"
-}
