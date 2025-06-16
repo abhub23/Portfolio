@@ -89,7 +89,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
 
         <button
           className="flex h-[30px] w-[120px] cursor-pointer items-center justify-center rounded-[4px] bg-blue-400 p-[2px] text-[11px] font-medium text-white/90 hover:bg-blue-400/95 lg:h-[38px] lg:w-[140px] lg:rounded-[6px] lg:text-[14px] dark:text-white/80"
-          onClick={() => window.open('https://x.com/abdullah_twt23', '_black')}
+          onClick={() => window.open('https://twitter.com/messages/compose?recipient_id=abdullah_twt23', '_black')}
         >
           <FaXTwitter className="mr-[4px] text-center text-[16px] lg:text-[18px]" />
           Chat on Twitter
