@@ -23,10 +23,10 @@ const Projects: React.FC = () => {
       </p>
       <div className="grid justify-center gap-4 lg:mx-104 lg:grid-cols-2">
         <Card
-          Title="Chathub"
-          Desc="Chathub is a fast, secure private chat app powered by Socket.IO. Instantly connect, message friends, and enjoy real-time private conversations with no distractions. Simple, smooth, and built for people who value privacy and speed."
+          Title="Privado"
+          Desc="Privado is a fast, secure private chat app powered by Socket.IO. Instantly connect, message friends, and enjoy real-time private conversations with no distractions. Simple, smooth, and built for people who value privacy and speed."
           SrcLink="https://github.com/abhub23/Web-Socket-Server-Sets"
-          WebLink="https://chathub.abdullahtech.dev"
+          WebLink="https://privado.abdullahtech.dev"
           Skills={[
             'Typescript',
             'React',
