@@ -86,21 +86,20 @@ const Projects: React.FC = () => {
         />
 
         <Card
-          Title="React Flip game"
-          Desc="Compare your Github Metrics with the best in the Bizz. Torvalds, Karpathy, Harkirat and who not. You think you're doing your best? Lets see here mate."
-          SrcLink=""
-          WebLink=""
+          Title="Go http server"
+          Desc="Made an Http Server in Go from scratch. A reliable Tcp connection using go std net library and unix system calls interacting with low level networking of the operating system."
+          SrcLink="https://github.com/abhub23/http-Server-Go"
+          WebLink="https://github.com/abhub23/http-Server-Go"
           Skills={[
-            'Typescript',
-            'React',
-            'Express',
-            'TailwindCSS',
-            'Prisma',
-            'PostgreSQL',
-            'Gemini API',
-            'Docker',
+            'Golang',
+            'Networking',
+            'HTTP',
+            'Operating System',
+            'TCP',
+            'Sys Calls',
+            'Unix',
           ]}
-          Imglink="/chat.png"
+          Imglink="/gologo.webp"
         />
 
         <Card
