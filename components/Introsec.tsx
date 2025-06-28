@@ -23,7 +23,7 @@ const Introsec: React.FC = (): JSX.Element => {
         <div className="relative flex h-[160px] w-[120px] justify-center lg:h-[180px] lg:w-[180px]">
           <Image
             alt="me"
-            src="/me.png"
+            src="/me.webp"
             onClick={() => window.open('https://github.com/abhub23', '_blank')}
             fill
             className="rounded-lg object-cover"
