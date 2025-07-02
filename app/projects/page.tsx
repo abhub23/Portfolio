@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
         className={`text-[26px] lg:text-[32px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
       >
         {' '}
-        Projects
+        Proof of work
       </p>
       <div className="grid justify-center gap-4 lg:mx-104 lg:grid-cols-2">
         <Card
