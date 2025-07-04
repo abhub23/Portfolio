@@ -7,17 +7,22 @@ import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abdullahtech.dev'),
-  title: 'Abdullah',
+  title: 'Abdullah - Fullstack Engineer',
   icons: {
-    icon: "/bg.png",
+    icon: "/icon.webp",
     
   },
   description:
     "Abdullah Mukri is a Software Engineer and a Fullstack Developer who's expertize are in Building Scalable and Robust Maintainable Products from Scratch",
   keywords: [
     'Abdullah Mukri',
+    'Abdullah Tech',
+    'Abdullah Dev',
+    'Abdullah Technology',
+    'Abdullah Developer',
     'Software Engineer',
     'Software Developer',
+    'Fullstack Engineer',
     'Fullstack Developer',
     'Portfolio Website',
     'Javascript',
@@ -36,11 +41,11 @@ export const metadata: Metadata = {
     siteId: 'https://x.com/abdullah_twt23',
   },
 
-  // appLinks: {
-  //   web: {
-  //     url: new URL(''),
-  //   },
-  // },
+  appLinks: {
+    web: {
+      url: new URL('https://abdullahtech.dev'),
+    },
+  },
 
   category: 'Portfolio Website',
 };
