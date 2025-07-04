@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     
   },
   description:
-    "Abdullah Mukri is a Software Engineer and a Fullstack Developer who's expertize are in Building Scalable and Robust Maintainable Products from Scratch",
+    "A Fullstack Engineer who enjoys writing Typescript and Go",
   keywords: [
     'Abdullah Mukri',
     'Abdullah Tech',
