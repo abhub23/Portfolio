@@ -90,7 +90,7 @@ app.post('/api/sendmessage', async (req: Request<{}, {}, UserBody>, res: any) =>
 if (process.env.VERCEL != '1') {
   app.listen(Port, '0.0.0.0', () => {
     console.log(`Server Listening on Port: ${Port}`);
-  })
+  });
 }
 
 export default app;

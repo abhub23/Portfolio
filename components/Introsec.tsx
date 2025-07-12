@@ -18,7 +18,7 @@ const Introsec: React.FC = (): JSX.Element => {
   return (
     <>
       <div
-        className={`mt-[120px] flex flex-col items-center justify-center bg-transparent text-black lg:mt-26 lg:h-[500px] dark:text-white ${Bricolage} `}
+        className={`mt-[120px] flex flex-col items-center justify-center bg-transparent text-black/90 lg:mt-26 lg:h-[500px] dark:text-white/90 ${Bricolage} `}
       >
         <div className="relative flex h-[160px] w-[120px] justify-center lg:h-[180px] lg:w-[180px]">
           <Image

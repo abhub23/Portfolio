@@ -1,5 +1,5 @@
 {
-    /*
+  /*
   
   What is seed.ts?
   The seed.ts file is used to add sample data (like test users, posts, etc.) into your database. This is called "seeding" your database.
@@ -16,28 +16,24 @@
 import { PrismaClient, Prisma } from '@prisma/client';
 const prisma = new PrismaClient();
 const main = async () => {
-    try {
-        await prisma.users.create({
-            data: { id: 1, email: 'test@gmail.com', message: 'testing' },
-        });
-        console.log('prisma init data');
+  try {
+    await prisma.users.create({
+      data: { id: 1, email: 'test@gmail.com', message: 'testing' },
+    });
+    console.log('prisma init data');
+  } catch (error) {
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      if (error.code === 'P2002') {
+        // Unique constraint violation
+        console.error('Unique constraint violation:', error.meta);
+      } else {
+        console.error('Prisma error:', error.message);
+      }
+    } else {
+      console.error('Unexpected error:', error);
     }
-    catch (error) {
-        if (error instanceof Prisma.PrismaClientKnownRequestError) {
-            if (error.code === 'P2002') {
-                // Unique constraint violation
-                console.error('Unique constraint violation:', error.meta);
-            }
-            else {
-                console.error('Prisma error:', error.message);
-            }
-        }
-        else {
-            console.error('Unexpected error:', error);
-        }
-    }
-    finally {
-        await prisma.$disconnect();
-    }
+  } finally {
+    await prisma.$disconnect();
+  }
 };
 main();

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Theme } from '@radix-ui/themes';
+import { Toaster } from 'sonner';
 import Navbar from '@/components/Navbar';
 import { DarkmodeProvider } from '@/store/DarkmodeProvider';
 import '@radix-ui/themes/styles.css';
@@ -9,17 +10,16 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://abdullahtech.dev'),
   title: 'Abdullah - Fullstack Engineer',
   icons: {
-    icon: "/icon.webp",
-    
+    icon: '/icon.webp',
   },
-  description:
-    "A Fullstack Engineer who enjoys writing Typescript and Go",
+  description: 'A Fullstack Engineer who enjoys writing Typescript and Go',
   keywords: [
     'Abdullah Mukri',
     'Abdullah Tech',
     'Abdullah Dev',
     'Abdullah Technology',
     'Abdullah Developer',
+    'Abdullah Fullstack Engineer',
     'Software Engineer',
     'Software Developer',
     'Fullstack Engineer',
@@ -76,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Theme className="dark:!bg-black">
             <Navbar />
             {children}
+            <Toaster />
           </Theme>
         </DarkmodeProvider>
       </body>

@@ -36,7 +36,7 @@ const Card: React.FC<Cardprops> = ({
       <div className="group relative w-[320px]">
         <div className="flex items-center justify-start">
           <h3
-            className={`mt-[4px] ml-[8px] transform text-[22px] leading-6 font-bold text-black uppercase transition-all duration-500 ease-in-out hover:scale-105 hover:text-rose-600 lg:w-fit dark:text-white ${Bricolage}`}
+            className={`mt-[4px] ml-[8px] transform text-[22px] leading-6 font-semibold text-black transition-all duration-500 ease-in-out hover:scale-105 hover:text-rose-600 lg:w-fit dark:text-white ${Bricolage}`}
           >
             <a href={WebLink}>
               <span className={`absolute inset-0 max-w-xs ${Bricolage}`} />
@@ -54,7 +54,7 @@ const Card: React.FC<Cardprops> = ({
         </div>
 
         <p
-          className={`mt-5 transform px-2 text-justify text-[13px] text-black transition-all duration-500 ease-in-out dark:text-white ${Bricolage} `}
+          className={`mt-5 transform px-2 text-justify text-[13px] text-black dark:text-white ${Bricolage} `}
         >
           {Desc}
         </p>

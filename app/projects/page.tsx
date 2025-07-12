@@ -23,6 +23,24 @@ const Projects: React.FC = () => {
       </p>
       <div className="grid justify-center gap-4 lg:mx-104 lg:grid-cols-2">
         <Card
+          Title="PurgeAI"
+          Desc="Purge AI is an AI-powered tool that analyzes GitHub PRs using LLMs and metadata extraction. It streamlines developer workflows with accurate labeling, concise summaries, and dynamic adaptation to different repositories, boosting speed, consistency, and review efficiency."
+          SrcLink="https://github.com/abhub23/purge.ai"
+          WebLink="https://purgeai.abdullahtech.dev"
+          Skills={[
+            'Typescript',
+            'React',
+            'NextJS',
+            'Express',
+            'Node JS',
+            'OAuth2',
+            'Prisma',
+            'TailwindCSS',
+            'Vercel',
+          ]}
+          Imglink="/purgeailogo.webp"
+        />
+        <Card
           Title="Privado"
           Desc="Privado is a fast, secure private chat app powered by Socket.IO. Instantly connect, message friends, and enjoy real-time private conversations with no distractions. Simple, smooth, and built for people who value privacy and speed."
           SrcLink="https://github.com/abhub23/Web-Socket-Server-Sets"
@@ -51,7 +69,7 @@ const Projects: React.FC = () => {
         />
 
         <Card
-          Title="React Flip game"
+          Title="React Flip Game"
           Desc="Created a Fun to play Memory Game using React and TypeScript with dynamic grids support, dark and light themes and easy to hard levels with a very cool UI to interact with. Hope you enjoy it."
           SrcLink="https://github.com/abhub23/React-Flip-Game"
           WebLink="https://flipgame.abdullahtech.dev/"
@@ -68,37 +86,11 @@ const Projects: React.FC = () => {
         />
 
         <Card
-          Title="React Flip game"
-          Desc="Created a Memory Game using React and TypeScript with dynamic grids, easy to hard levels and very cool UI to interact with."
-          SrcLink="https://github.com/abhub23/React-Flip-Game"
-          WebLink=""
-          Skills={[
-            'Typescript',
-            'React',
-            'Express',
-            'TailwindCSS',
-            'Prisma',
-            'PostgreSQL',
-            'Gemini API',
-            'Docker',
-          ]}
-          Imglink="/chat.png"
-        />
-
-        <Card
-          Title="Go http server"
+          Title="Go Http Server"
           Desc="Made an Http Server in Go from scratch. A reliable Tcp connection using go std net library and unix system calls interacting with low level networking of the operating system."
           SrcLink="https://github.com/abhub23/http-Server-Go"
           WebLink="https://github.com/abhub23/http-Server-Go"
-          Skills={[
-            'Golang',
-            'Networking',
-            'HTTP',
-            'Operating System',
-            'TCP',
-            'Sys Calls',
-            'Unix',
-          ]}
+          Skills={['Golang', 'Networking', 'HTTP', 'Operating System', 'TCP', 'Sys Calls', 'Unix']}
           Imglink="/gologo.webp"
         />
 

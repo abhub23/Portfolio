@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "eslintConfig": {
-  "ignorePatterns": ["backend"]
-},
+    "ignorePatterns": [
+      "backend"
+    ]
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
