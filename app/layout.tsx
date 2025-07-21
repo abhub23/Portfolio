@@ -41,12 +41,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@abdullah_twt23',
     creator: '@abdullah_twt23',
-    title: '@abdullah_twt23',
+    title: 'abdullah_twt23',
     description: 'Abdullah Mukri Portfolio Twitter card',
     images: {
       url: 'https://abdullahtech.dev/og-image.png',
-      type: 'image/png'
-    }
+      type: 'image/png',
+    },
   },
 
   appLinks: {
