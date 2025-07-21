@@ -8,7 +8,7 @@ import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abdullahtech.dev'),
-  title: 'Abdullah - Fullstack Engineer',
+  title: 'Abdullah - Fullstack Engineer who loves to build stuff',
   icons: {
     icon: '/icon.webp',
   },
@@ -36,9 +36,17 @@ export const metadata: Metadata = {
     name: 'Abdullah Mukri',
   },
   publisher: 'Abdullah Mukri',
+
   twitter: {
-    site: 'https://x.com/abdullah_twt23',
-    siteId: 'https://x.com/abdullah_twt23',
+    card: 'summary_large_image',
+    site: '@abdullah_twt23',
+    creator: '@abdullah_twt23',
+    title: 'PurgeAI, Understand GitHub PRs with AI',
+    description: 'Purge AI analyzes GitHub pull requests and gives you deep insights instantly.',
+    images: {
+      url: 'https://abdullahtech.dev/og-image.png',
+      type: 'image/png'
+    }
   },
 
   appLinks: {
