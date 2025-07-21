@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@abdullah_twt23',
     creator: '@abdullah_twt23',
-    title: 'PurgeAI, Understand GitHub PRs with AI',
-    description: 'Purge AI analyzes GitHub pull requests and gives you deep insights instantly.',
+    title: '@abdullah_twt23',
+    description: 'Abdullah Mukri Portfolio Twitter card',
     images: {
       url: 'https://abdullahtech.dev/og-image.png',
       type: 'image/png'
