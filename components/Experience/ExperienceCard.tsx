@@ -5,7 +5,6 @@ import { ExpTypes } from './Experience';
 import { FC } from 'react';
 import Image from 'next/image';
 import { Bricolage } from '@/utils/fonts';
-import { log } from 'console';
 
 const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
   return (
@@ -13,17 +12,20 @@ const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`${Bricolage} rounded-sm lg:h-[80px] lg:w-[700px] lg:pt-10`}
+      className={`${Bricolage} rounded-sm lg:h-[70px] h-[54px]  w-[340px] lg:w-[700px] lg:pt-10`}
     >
-      <section className="flex flex-col">
-        <p className="fixed font-semibold lg:top-0 lg:left-3">{org}</p>
-        <p className="fixed lg:bottom-1 lg:left-3">
-          <Image src={logo as string} height={45} width={45} alt=""></Image>
-        </p>
-      </section>
-      <p className="fixed mr-36 text-[14px] lg:top-7 lg:left-[70px]">{desc}</p>
+      <p className="fixed bottom-2 top-2">
+        <Image src={logo as string} height={45} width={45} alt="" className='h-[40px] w-[40px] lg:h-[50px] lg:w-[50px]'></Image>
+      </p>
 
-      <p className="fixed top-2 right-2 text-[14px] font-medium">{duration}</p>
+      <section className="flex flex-col lg:text-[14px] text-[13px] font-semibold">
+        <p className="fixed top-2 lg:top-3 lg:left-[70px] left-[50px]">{org}</p>
+        <p className="fixed lg:mr-40 mr-10 lg:top-8 top-6.5 lg:left-[70px] left-[50px]">{desc}</p>
+      </section>
+
+
+
+      <p className="fixed lg:top-3 top-2 right-2 text-[11px] lg:text-[14px] font-medium">{duration}</p>
     </motion.div>
   );
 };
