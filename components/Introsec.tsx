@@ -12,7 +12,7 @@ const Introsec: React.FC = (): JSX.Element => {
   };
 
   const scrollDown = () => {
-    const scrollTarget = window.innerWidth > 1500 ? 2325 : 2900;
+    const scrollTarget = window.innerWidth > 1500 ? 5000 : 6000;
     window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
   };
 

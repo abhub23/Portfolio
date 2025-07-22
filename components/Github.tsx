@@ -9,7 +9,7 @@ const Github: React.FC = (): JSX.Element => {
         Github Contributions
       </p>
       <Image
-        src="https://ghchart.rshah.org/216E39/abhub23"
+        src="https://ghchart.rshah.org/158a17/abhub23"
         alt="Github contribution Chart"
         width={780}
         height={500}

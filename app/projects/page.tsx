@@ -1,12 +1,19 @@
 'use client';
 
-import Card from '@/components/Card';
+import Card from '@/components/project/Card';
 import { Bricolage } from '@/utils/fonts';
 import { usePathname } from 'next/navigation';
 import { motion } from 'motion/react';
+import { projects } from '@/components/project/projects';
+import { useState } from 'react';
+import { Loadbtn } from '@/components/project/Loadbtn';
+import { ChevronDownIcon } from '@radix-ui/themes';
+import { ChevronUpIcon } from '@radix-ui/react-icons';
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const pathname = usePathname();
+
+  const [num, setNum] = useState(6);
 
   return (
     <motion.div
@@ -16,102 +23,31 @@ const Projects: React.FC = () => {
       className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}
     >
       <p
-        className={`text-[26px] lg:text-[32px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
+        className={`text-[26px] lg:text-[30px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
       >
         {' '}
         Proof of work
       </p>
-      <div className="grid justify-center gap-4 lg:mx-104 lg:grid-cols-2">
-        <Card
-          Title="PurgeAI"
-          Desc="Purge AI is an AI-powered tool that analyzes GitHub PRs using LLMs and metadata extraction. It streamlines developer workflows with accurate labeling, concise summaries, and dynamic adaptation to different repositories, boosting speed, consistency, and review efficiency."
-          SrcLink="https://github.com/abhub23/purge.ai"
-          WebLink="https://purgeai.abdullahtech.dev"
-          Skills={[
-            'Typescript',
-            'React',
-            'NextJS',
-            'Express',
-            'Node JS',
-            'OAuth2',
-            'Prisma',
-            'TailwindCSS',
-            'Vercel',
-          ]}
-          Imglink="/purgeailogo.webp"
-        />
-        <Card
-          Title="Privado"
-          Desc="Privado is a fast, secure private chat app powered by Socket.IO. Instantly connect, message friends, and enjoy real-time private conversations with no distractions. Simple, smooth, and built for people who value privacy and speed."
-          SrcLink="https://github.com/abhub23/Web-Socket-Server-Sets"
-          WebLink="https://privado.abdullahtech.dev"
-          Skills={[
-            'Typescript',
-            'React',
-            'NextJS',
-            'Express',
-            'Node JS',
-            'Socket.IO',
-            'TailwindCSS',
-            'Golang',
-            'Vercel',
-          ]}
-          Imglink="/chat.png"
-        />
-
-        <Card
-          Title="Github Metrics"
-          Desc="Now you can Compare your Github Stats with the best in the world, be it Torvalds, Karpathy, Harkirat and who not. You think you're doing your best? have better PR's than someone? Lets see here mate."
-          SrcLink="https://github.com/abhub23/Github-Metrics"
-          WebLink="https://githubstats.abdullahtech.dev"
-          Skills={['Typescript', 'React', 'Express', 'TailwindCSS', 'Vite', 'Gemini', 'Zustand']}
-          Imglink="/githublogo.png"
-        />
-
-        <Card
-          Title="React Flip Game"
-          Desc="Created a Fun to play Memory Game using React and TypeScript with dynamic grids support, dark and light themes and easy to hard levels with a very cool UI to interact with. Hope you enjoy it."
-          SrcLink="https://github.com/abhub23/React-Flip-Game"
-          WebLink="https://flipgame.abdullahtech.dev/"
-          Skills={[
-            'Typescript',
-            'React',
-            'TailwindCSS',
-            'next - themes',
-            'grids',
-            'Vercel',
-            'Zustand',
-          ]}
-          Imglink="/flipgame.webp"
-        />
-
-        <Card
-          Title="Go Http Server"
-          Desc="Made an Http Server in Go from scratch. A reliable Tcp connection using go std net library and unix system calls interacting with low level networking of the operating system."
-          SrcLink="https://github.com/abhub23/http-Server-Go"
-          WebLink="https://github.com/abhub23/http-Server-Go"
-          Skills={['Golang', 'Networking', 'HTTP', 'Operating System', 'TCP', 'Sys Calls', 'Unix']}
-          Imglink="/gologo.webp"
-        />
-
-        <Card
-          Title="React Flip game"
-          Desc="Compare your Github Metrics with the best in the Bizz. Torvalds, Karpathy, Harkirat and who not. You think you're doing your best? Lets see here mate."
-          SrcLink=""
-          WebLink=""
-          Skills={[
-            'Typescript',
-            'React',
-            'Express',
-            'TailwindCSS',
-            'Prisma',
-            'PostgreSQL',
-            'Gemini API',
-            'Docker',
-          ]}
-          Imglink="/chat.png"
-        />
+      <div className="mb-8 grid justify-center gap-4 lg:mx-104 lg:mb-10 lg:grid-cols-2">
+        {projects.slice(0, num).map((val, idx) => (
+          <Card
+            key={idx}
+            Title={val.title}
+            Desc={val.desc}
+            SrcLink={val.srcLink}
+            WebLink={val.webLink}
+            Skills={val.skills}
+            Imglink={val.imgLink}
+          />
+        ))}
       </div>
+      {/* { projects.length != num ? (
+        <div className="flex justify-center lg:mt-[-24px]">
+          <Loadbtn name='Load more' onClick={() => setNum(c => c + 2)} icon={<ChevronDownIcon />} />
+        </div>
+      ) : projects.length == num ? <div className="flex justify-center lg:mt-[-24px]">
+        <Loadbtn name='Show less' onClick={() => setNum(c => c > 6 ? c - 2 : c - 0)} icon={<ChevronUpIcon />} /> </div> : <></>
+      } */}
     </motion.div>
   );
 };
