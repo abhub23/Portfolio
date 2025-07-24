@@ -9,7 +9,7 @@ const WebsiteBtn: React.FC<WeblinkType> = ({ Weblink }) => {
   return (
     <div>
       <Link href={Weblink} target="_blank">
-        <button className="group flex h-6 cursor-pointer items-center justify-center gap-1 rounded-xs border-1 border-black bg-red-600 p-1 px-[5px] pt-[5px] text-xs font-bold text-white transition duration-400 hover:bg-white hover:text-black lg:border-2 dark:border-white">
+        <button className="group flex h-6 cursor-pointer items-center justify-center gap-1 rounded-xs border-1 border-black bg-red-600 p-1 px-[5px] pt-[5px] lg:text-xs text-[10px] font-bold text-white transition duration-400 hover:bg-white hover:text-black lg:border-2 dark:border-white">
           <svg
             width={14}
             height={14}

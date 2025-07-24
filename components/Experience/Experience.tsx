@@ -28,7 +28,7 @@ const Experience = () => {
   return (
     <>
       <span
-        className={`${Bricolage} mb-2 flex justify-center text-[24px] font-semibold lg:mb-[12px] lg:mt-[20px] lg:text-[30px]`}
+        className={`${Bricolage} mb-2 flex justify-center text-[20px] font-semibold lg:mb-[12px] lg:mt-[20px] lg:text-[30px]`}
       >
         Experience
       </span>

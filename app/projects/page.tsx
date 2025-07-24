@@ -7,8 +7,8 @@ import { motion } from 'motion/react';
 import { projects } from '@/components/project/projects';
 import { useState } from 'react';
 import { Loadbtn } from '@/components/project/Loadbtn';
-import { ChevronDownIcon } from '@radix-ui/themes';
-import { ChevronUpIcon } from '@radix-ui/react-icons';
+// import { ChevronDownIcon } from '@radix-ui/themes';
+// import { ChevronUpIcon } from '@radix-ui/react-icons';
 
 const Projects = () => {
   const pathname = usePathname();
@@ -23,7 +23,7 @@ const Projects = () => {
       className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}
     >
       <p
-        className={`text-[26px] lg:text-[30px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
+        className={`text-[20px] lg:text-[30px] ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
       >
         {' '}
         Proof of work

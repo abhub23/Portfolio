@@ -75,13 +75,13 @@ const Connectwithme: React.FC = (): JSX.Element => {
     <div
       className={` ${Bricolage} flex h-[380px] flex-col items-start p-4 lg:ml-100 lg:h-[460px] lg:w-[750px]`}
     >
-      <div className={`mx-auto mb-2 text-[24px] font-semibold lg:mb-5 lg:text-[30px]`}>
+      <div className={`mx-auto mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]`}>
         Connect with me
       </div>
 
       <div className="mb-1 flex h-[40px] w-full justify-start gap-x-[8px] p-1 lg:h-[50px] lg:gap-x-[12px]">
         <button
-          className="flex h-[30px] w-[140px] cursor-pointer items-center justify-center rounded-[4px] bg-emerald-400 p-[2px] text-[11px] font-medium text-black/80 hover:bg-emerald-400/90 lg:h-[38px] lg:w-[175px] lg:rounded-[6px] lg:text-[14px] dark:text-black/80"
+          className="flex h-[28px] w-[130px] cursor-pointer items-center justify-center rounded-[4px] bg-emerald-400 p-[2px] text-[10px] font-medium text-black/80 hover:bg-emerald-400/90 lg:h-[38px] lg:w-[175px] lg:rounded-[6px] lg:text-[14px] dark:text-black/80"
           onClick={() =>
             window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank')
           }
@@ -91,7 +91,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         </button>
 
         <button
-          className="flex h-[30px] w-[120px] cursor-pointer items-center justify-center rounded-[4px] bg-blue-400 p-[2px] text-[11px] font-medium text-white/90 hover:bg-blue-400/95 lg:h-[38px] lg:w-[140px] lg:rounded-[6px] lg:text-[14px] dark:text-white/80"
+          className="flex h-[28px] w-[114px] cursor-pointer items-center justify-center rounded-[4px] bg-blue-400 p-[2px] text-[10px] font-medium text-white/90 hover:bg-blue-400/95 lg:h-[38px] lg:w-[140px] lg:rounded-[6px] lg:text-[14px] dark:text-white/80"
           onClick={() =>
             window.open(
               'https://twitter.com/messages/compose?recipient_id=abdullah_twt23',

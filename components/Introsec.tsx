@@ -23,7 +23,7 @@ const Introsec: React.FC = (): JSX.Element => {
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`mt-[120px] flex flex-col items-center justify-center bg-transparent text-black/90 lg:mt-26 lg:h-[500px] dark:text-white/90 ${Bricolage} `}
     >
-      <div className="relative flex h-[160px] w-[120px] justify-center lg:h-[180px] lg:w-[180px]">
+      <div className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]">
         <Image
           alt="me"
           src="/me.webp"
@@ -33,21 +33,21 @@ const Introsec: React.FC = (): JSX.Element => {
           priority
         />
       </div>
-      <div className="p-2 pb-1 text-[26px] font-bold lg:text-[42px]">
+      <div className="p-4 pb-1 text-[24px] font-bold lg:text-[42px]">
         Hey, I&apos;m Abdullah Mukri
       </div>
 
-      <div className="px-4 pt-1 text-center text-[13px] lg:mx-auto lg:text-[16px]">
+      <div className="px-7 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
         Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
         Typescript and Go.
       </div>
 
-      <div className="px-[14px] pt-1 text-center text-[13px] lg:mx-auto lg:text-[16px]">
+      <div className="px-9 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </div>
 
-      <div className="px-4 pt-1 text-center text-[13px] lg:mx-auto lg:text-[16px]">
+      <div className="px-9 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
         Want&apos;s to connect or just say hi? please don&apos;t hesitate. feel free to connect!
       </div>
       <div className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6">
