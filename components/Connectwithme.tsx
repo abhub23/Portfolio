@@ -109,11 +109,11 @@ const Connectwithme: React.FC = (): JSX.Element => {
       </div>
       <input
         type="text"
-        placeholder="abdullahmukri25@gmail.com"
+        placeholder="xyz@gmail.com"
         required={true}
         onChange={(e) => setEmail(e.currentTarget.value)}
         value={email}
-        className="mb-[12px] h-[32px] w-[325px] rounded-[5px] border-1 border-black bg-white p-2 text-[12px] focus:outline-none lg:h-[38px] lg:w-[705px] lg:border-[1px] lg:text-[15px] dark:border-white/60 dark:bg-black"
+        className="mb-[12px] h-[32px] w-[325px] rounded-[5px] border-1 border-neutral-300 bg-white p-2 text-[12px] focus:outline-none lg:h-[38px] lg:w-[705px] lg:border-[1px] lg:text-[15px] dark:border-neutral-600 dark:bg-black"
       />
       <div className="p-[2px] text-[14px] font-normal lg:pb-[8px] lg:text-[16px]">Message</div>
       <textarea
@@ -123,7 +123,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         required={true}
         onChange={(e) => setMessage(e.currentTarget.value)}
         value={message}
-        className="mb-[15px] h-[72px] max-h-[115px] min-h-[72px] w-[325px] max-w-[325px] min-w-[325px] resize overflow-hidden rounded-[4px] border-1 border-black bg-white p-2 text-[12px] focus:outline-none lg:mb-[20px] lg:max-h-[130px] lg:w-[705px] lg:max-w-[705px] lg:min-w-[705px] lg:border-[1px] lg:text-[15px] dark:border-white/60 dark:bg-black"
+        className="mb-[15px] h-[72px] max-h-[115px] min-h-[72px] w-[325px] max-w-[325px] min-w-[325px] resize overflow-hidden rounded-[4px] border-1 border-neutral-300 bg-white p-2 text-[12px] focus:outline-none lg:mb-[20px] lg:max-h-[130px] lg:w-[705px] lg:max-w-[705px] lg:min-w-[705px] lg:border-[1px] lg:text-[15px] dark:border-neutral-600 dark:bg-black"
       />
       <button
         className="mt-1 h-9 w-[325px] cursor-pointer rounded-[4px] border-2 border-black bg-black text-[12px] tracking-wide text-white hover:bg-stone-900 lg:w-[705px] lg:text-[14px] dark:border-white dark:bg-white dark:text-black dark:hover:bg-gray-100"
