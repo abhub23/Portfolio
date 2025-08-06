@@ -52,17 +52,17 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   site: '@abdullah_twt23',
-  //   creator: '@abdullah_twt23',
-  //   title: 'abdullah_twt23',
-  //   description: 'Abdullah Mukri Portfolio Twitter card',
-  //   images: {
-  //     url: 'https://abdullahtech.dev/og-image.png',
-  //     type: 'image/png',
-  //   },
-  // },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@abdullah_twt23',
+    creator: '@abdullah_twt23',
+    title: 'abdullah_twt23',
+    description: 'abdullahtech.dev',
+    images: {
+      url: 'https://abdullahtech.dev/og-image.png',
+      type: 'image/png',
+    },
+  },
 
   appLinks: {
     web: {
