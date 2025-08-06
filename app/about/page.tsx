@@ -48,7 +48,7 @@ const About: React.FC = (): JSX.Element => {
     },
   ];
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 ">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
