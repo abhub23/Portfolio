@@ -4,12 +4,12 @@ import Introsec from '@/components/Introsec';
 import Projects from './projects/page';
 import Connectwithme from '@/components/Connectwithme';
 import Skills from '@/components/Skills';
-import { Bricolage } from '@/utils/fonts';
 import Experience from '@/components/Experience/Experience';
+import { Bricolage } from '@/utils/fonts';
 
 export default function Home() {
   return (
-    <>
+    <div className={`bg-neutral-50 dark:bg-neutral-950 ${Bricolage}`}>
       <Introsec />
       <Projects />
       <Experience />
@@ -17,6 +17,6 @@ export default function Home() {
       <Skills />
       <Connectwithme />
       <Footer />
-    </>
+    </div>
   );
 }

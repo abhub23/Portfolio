@@ -4,7 +4,6 @@ import { motion } from 'motion/react';
 import { ExpTypes } from './Experience';
 import { FC } from 'react';
 import Image from 'next/image';
-import { Bricolage } from '@/utils/fonts';
 
 const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
   return (
@@ -12,7 +11,7 @@ const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`${Bricolage} h-[54px] w-[320px] rounded-sm lg:h-[70px] lg:w-[700px] lg:pt-10`}
+      className="h-[54px] w-[320px] rounded-sm lg:h-[70px] lg:w-[700px] lg:pt-10 dark:bg-neutral-950"
     >
       <p className="fixed top-2 bottom-2">
         <Image

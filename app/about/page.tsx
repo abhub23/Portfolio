@@ -48,28 +48,32 @@ const About: React.FC = (): JSX.Element => {
     },
   ];
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`${Bricolage} mx-auto mt-[140px] mb-[40px] flex w-[340px] flex-col items-center justify-center text-black lg:w-[800px] dark:text-white`}
-    >
-      {aboutArr.map((el, idx) => (
-        <div key={idx} className="mx-auto flex w-[300px] flex-col justify-start lg:w-[800px]">
-          <div className="p-[4px] text-[16px] font-medium lg:p-[8px] lg:text-[22px]">{el.year}</div>
-          {el.desc.map((el1, idx1) => (
-            <div
-              key={idx1}
-              className="flex flex-row items-start p-[4px] pr-[10px] text-[13px] lg:p-[5px] lg:text-[16px]"
-            >
-              <div className="mt-[11px] mr-[10px] ml-[3px] h-[1px] min-w-[10px] bg-black lg:ml-[3px] lg:min-w-[14px] dark:bg-gray-400" />
-              <p className="pl-[2px] text-justify leading-relaxed lg:pl-1">{el1}</p>
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className={`${Bricolage} mx-auto mt-[140px] mb-[40px] flex w-[340px] flex-col items-center justify-center text-black lg:w-[800px] dark:text-white`}
+      >
+        {aboutArr.map((el, idx) => (
+          <div key={idx} className="mx-auto flex w-[300px] flex-col justify-start lg:w-[800px]">
+            <div className="p-[4px] text-[16px] font-medium lg:p-[8px] lg:text-[22px]">
+              {el.year}
             </div>
-          ))}
-        </div>
-      ))}
-    </motion.div>
+            {el.desc.map((el1, idx1) => (
+              <div
+                key={idx1}
+                className="flex flex-row items-start p-[4px] pr-[10px] text-[13px] lg:p-[5px] lg:text-[16px]"
+              >
+                <div className="mt-[11px] mr-[10px] ml-[3px] h-[1px] min-w-[10px] bg-black lg:ml-[3px] lg:min-w-[14px] dark:bg-gray-400" />
+                <p className="pl-[2px] text-justify leading-relaxed lg:pl-1">{el1}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 

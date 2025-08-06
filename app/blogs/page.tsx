@@ -12,7 +12,7 @@ const ErrorPage = () => {
 
   return (
     <div
-      className={`${Bricolage} flex h-screen flex-col items-center justify-center bg-white font-semibold dark:bg-black`}
+      className={`${Bricolage} flex h-screen flex-col items-center justify-center bg-neutral-50 font-semibold dark:bg-neutral-950`}
     >
       <motion.div
         initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}

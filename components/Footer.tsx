@@ -8,7 +8,7 @@ const Footer = () => {
     >
       Designed and Developed by
       <Link
-        className="ml-1.5 font-medium text-neutral-950 dark:text-neutral-100"
+        className="ml-1.5 rounded-xs bg-neutral-200 px-[6px] py-[1px] font-normal text-neutral-950 dark:bg-neutral-800 dark:text-neutral-100"
         href="https://x.com/abdullah_twt23"
         target="_black"
       >

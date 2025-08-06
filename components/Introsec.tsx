@@ -1,7 +1,6 @@
 'use client';
 
 import { JSX } from 'react';
-import { Bricolage } from '@/utils/fonts';
 import Button from '../components/Button';
 import Image from 'next/image';
 import { motion } from 'motion/react';
@@ -21,7 +20,7 @@ const Introsec: React.FC = (): JSX.Element => {
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`mt-[120px] flex flex-col items-center justify-center bg-transparent text-black/90 lg:mt-26 lg:h-[500px] dark:text-white/90 ${Bricolage} `}
+      className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-black/90 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90"
     >
       <div className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]">
         <Image
