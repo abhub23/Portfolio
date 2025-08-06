@@ -94,9 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-white dark:bg-black">
+      <body className="bg-neutral-50 dark:bg-neutral-950">
         <DarkmodeProvider>
-          <Theme className="dark:!bg-black">
+          <Theme>
             <Navbar />
             {children}
             <Toaster />
