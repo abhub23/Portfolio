@@ -75,5 +75,5 @@ export const projects = [
       'Docker',
     ],
     imgLink: '/chat.png',
-  }
+  },
 ];

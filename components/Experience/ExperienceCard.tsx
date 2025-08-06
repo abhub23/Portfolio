@@ -12,20 +12,26 @@ const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
       animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`${Bricolage} rounded-sm lg:h-[70px] h-[54px] w-[320px] lg:w-[700px] lg:pt-10`}
+      className={`${Bricolage} h-[54px] w-[320px] rounded-sm lg:h-[70px] lg:w-[700px] lg:pt-10`}
     >
-      <p className="fixed bottom-2 top-2">
-        <Image src={logo as string} height={45} width={45} alt="" className='h-[40px] w-[40px] lg:h-[50px] lg:w-[50px]'></Image>
+      <p className="fixed top-2 bottom-2">
+        <Image
+          src={logo as string}
+          height={45}
+          width={45}
+          alt=""
+          className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px]"
+        ></Image>
       </p>
 
-      <section className="flex flex-col lg:text-[14px] text-[12px] font-semibold">
-        <p className="fixed top-2 lg:top-3 lg:left-[70px] left-[50px]">{org}</p>
-        <p className="fixed lg:mr-40 mr-10 lg:top-8 top-6.5 lg:left-[70px] left-[50px]">{desc}</p>
+      <section className="flex flex-col text-[12px] font-semibold lg:text-[14px]">
+        <p className="fixed top-2 left-[50px] lg:top-3 lg:left-[70px]">{org}</p>
+        <p className="fixed top-6.5 left-[50px] mr-10 lg:top-8 lg:left-[70px] lg:mr-40">{desc}</p>
       </section>
 
-
-
-      <p className="fixed lg:top-3 top-2 right-2 text-[10px] lg:text-[14px] font-medium">{duration}</p>
+      <p className="fixed top-2 right-2 text-[10px] font-medium lg:top-3 lg:text-[14px]">
+        {duration}
+      </p>
     </motion.div>
   );
 };

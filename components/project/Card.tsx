@@ -37,7 +37,7 @@ const Card: React.FC<Cardprops> = ({
           <h3
             className={`mt-[4px] ml-[8px] transform text-[18px] leading-6 font-semibold text-black transition-all duration-500 ease-in-out hover:scale-105 hover:text-rose-600 lg:w-fit dark:text-white ${Bricolage}`}
           >
-            <a href={WebLink} >
+            <a href={WebLink}>
               <span className={`absolute inset-0 max-w-xs ${Bricolage}`} />
               {Title}
             </a>
@@ -53,24 +53,24 @@ const Card: React.FC<Cardprops> = ({
         </div>
 
         <p
-          className={`mt-5 px-2 text-justify lg:text-[13px] text-[11px] text-black dark:text-white ${Bricolage} `}
+          className={`mt-5 px-2 text-justify text-[11px] text-black lg:text-[13px] dark:text-white ${Bricolage} `}
         >
           {Desc}
         </p>
       </div>
 
-      <div className="mt-6 flex lg:w-[330] w-[300px] flex-wrap gap-[4px] gap-y-[5px] px-3">
+      <div className="mt-6 flex w-[300px] flex-wrap gap-[4px] gap-y-[5px] px-3 lg:w-[330]">
         {Skills.map((el) => (
           <p
             key={el}
-            className={`ml-[2px] lg:h-[20px] h-[18px] cursor-pointer rounded-[3px] border-1 border-neutral-500 p-[2px] px-[4px] lg:text-[11px] text-[10px] text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-white dark:border-neutral-500 dark:text-white dark:hover:bg-white hover:dark:text-black ${Bricolage}`}
+            className={`ml-[2px] h-[18px] cursor-pointer rounded-[3px] border-1 border-neutral-500 p-[2px] px-[4px] text-[10px] text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-white lg:h-[20px] lg:text-[11px] dark:border-neutral-500 dark:text-white dark:hover:bg-white hover:dark:text-black ${Bricolage}`}
           >
             {el}
           </p>
         ))}
       </div>
 
-      <div className="mt-[30px] lg:mr-[130px] mr-[120px] flex gap-x-2 text-xs">
+      <div className="mt-[30px] mr-[120px] flex gap-x-2 text-xs lg:mr-[130px]">
         <GithubBtn Srclink={SrcLink} />
         <WebsiteBtn Weblink={WebLink} />
       </div>

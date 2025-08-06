@@ -37,17 +37,32 @@ export const metadata: Metadata = {
   },
   publisher: 'Abdullah Mukri',
 
-  twitter: {
-    card: 'summary_large_image',
-    site: '@abdullah_twt23',
-    creator: '@abdullah_twt23',
-    title: 'abdullah_twt23',
-    description: 'Abdullah Mukri Portfolio Twitter card',
-    images: {
-      url: 'https://abdullahtech.dev/og-image.png',
-      type: 'image/png',
-    },
+  openGraph: {
+    title: 'abdullahtech.dev',
+    description: '',
+    url: 'https://abdullahtech.dev',
+    siteName: 'https://abdullahtech.dev',
+    images: [
+      {
+        url: 'https://abdullahtech.dev/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: 'website',
   },
+
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   site: '@abdullah_twt23',
+  //   creator: '@abdullah_twt23',
+  //   title: 'abdullah_twt23',
+  //   description: 'Abdullah Mukri Portfolio Twitter card',
+  //   images: {
+  //     url: 'https://abdullahtech.dev/og-image.png',
+  //     type: 'image/png',
+  //   },
+  // },
 
   appLinks: {
     web: {
