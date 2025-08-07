@@ -28,7 +28,7 @@ const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
         <p className="fixed top-6.5 left-[50px] mr-10 lg:top-8 lg:left-[70px] lg:mr-40">{desc}</p>
       </section>
 
-      <p className="fixed top-2 right-2 text-[10px] font-medium lg:top-3 lg:text-[12px]">
+      <p className="fixed top-2 right-2 text-[10px] font-medium lg:top-3 lg:text-[14px]">
         {duration}
       </p>
     </motion.div>
