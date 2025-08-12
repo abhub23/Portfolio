@@ -12,6 +12,8 @@ import {
   CodeIcon,
   HomeIcon,
 } from '@radix-ui/react-icons';
+import {GitPullRequestArrow, Terminal} from 'lucide-react'
+
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
@@ -46,11 +48,11 @@ const Navbar: React.FC = (): JSX.Element => {
             </Tooltip>
           </Link>
 
-          <Link href="/blogs">
-            <Tooltip content="Blog">
+          <Link href="/opensource">
+            <Tooltip content="Open source">
               <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
-                <RowsIcon
-                  className={`h-[16px] w-[16px] text-black max-sm:h-[13px] max-sm:w-[13px] dark:text-white ${pathname.startsWith('/blogs') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
+                <GitPullRequestArrow
+                  className={`h-[16px] w-[16px] text-black max-sm:h-[13px] max-sm:w-[13px] dark:text-white ${pathname.startsWith('/opensource') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
                 />
               </div>
             </Tooltip>
