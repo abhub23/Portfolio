@@ -12,7 +12,7 @@ import {
   CodeIcon,
   HomeIcon,
 } from '@radix-ui/react-icons';
-import {GitPullRequestArrow, Terminal} from 'lucide-react'
+import { GitPullRequestArrow, Terminal } from 'lucide-react';
 
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';

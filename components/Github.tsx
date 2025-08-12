@@ -13,7 +13,7 @@ const Github = () => {
         width={780}
         height={500}
         unoptimized={true}
-        loading='lazy'
+        loading="lazy"
       />
     </div>
   );

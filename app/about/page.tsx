@@ -48,7 +48,7 @@ const About: React.FC = (): JSX.Element => {
     },
   ];
   return (
-    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 ">
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const About: React.FC = (): JSX.Element => {
       >
         {aboutArr.map((el, idx) => (
           <div key={idx} className="mx-auto flex w-[300px] flex-col justify-start lg:w-[800px]">
-            <div className="p-[4px] text-[16px] font-medium lg:p-[8px] lg:text-[22px]">
+            <div className="p-[4px] text-[16px] font-medium lg:p-[8px] lg:text-[20px]">
               {el.year}
             </div>
             {el.desc.map((el1, idx1) => (

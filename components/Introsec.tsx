@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 
 const Introsec: React.FC = (): JSX.Element => {
-  
   const openCal = () => {
     window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank');
   };
