@@ -9,14 +9,16 @@ import { Bricolage } from '@/utils/fonts';
 
 export default function Home() {
   return (
-    <div className={`bg-neutral-50 dark:bg-neutral-950 ${Bricolage}`}>
-      <Introsec />
-      <Projects />
-      <Experience />
-      <Github />
-      <Skills />
-      <Connectwithme />
-      <Footer />
+    <div className="bg-neutral-50 dark:bg-neutral-950">
+      <div className={`mx-auto w-full max-w-[900px] ${Bricolage}`}>
+        <Introsec />
+        <Projects />
+        <Experience />
+        <Github />
+        <Skills />
+        <Connectwithme />
+        <Footer />
+      </div>
     </div>
   );
 }
