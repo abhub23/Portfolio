@@ -36,17 +36,17 @@ const Introsec: React.FC = (): JSX.Element => {
         Hey, I&apos;m Abdullah Mukri
       </div>
 
-      <div className="px-7 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
+      <div className="px-7 pt-1 text-center text-[11px] lg:text-[16px]">
         Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
         Typescript and Go.
       </div>
 
-      <div className="px-9 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
+      <div className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </div>
 
-      <div className="px-9 pt-1 text-center text-[11px] lg:mx-auto lg:text-[16px]">
+      <div className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
         Want&apos;s to connect or just say hi? please don&apos;t hesitate. feel free to connect!
       </div>
       <div className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6">

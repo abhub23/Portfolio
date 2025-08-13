@@ -27,24 +27,24 @@ const OSContributionCard = ({
         <CardHeader>
           <div>
             <div className="flex items-center justify-between">
-              <CardTitle className="text-lg font-semibold">{title}</CardTitle>
+              <CardTitle className="font-semibold lg:text-lg">{title}</CardTitle>
 
               {(stars !== undefined || forks !== undefined) && (
-                <div className="text-muted-foreground flex items-center gap-3 text-xs">
+                <div className="text-muted-foreground flex items-center gap-1 text-xs lg:gap-3">
                   {language && (
-                    <Badge variant="outline" className="text-xs">
+                    <Badge variant="outline" className="text-[10px] lg:text-xs">
                       {language}
                     </Badge>
                   )}
                   {stars !== undefined && (
                     <div className="flex items-center gap-1">
-                      <Star className="h-3 w-3" />
+                      <Star className="size-2.5 lg:size-3" />
                       <span>{stars}</span>
                     </div>
                   )}
                   {forks !== undefined && (
                     <div className="flex items-center gap-1">
-                      <GitFork className="h-3 w-3" />
+                      <GitFork className="size-2.5 lg:size-3" />
                       <span>{forks}</span>
                     </div>
                   )}
@@ -52,7 +52,9 @@ const OSContributionCard = ({
               )}
             </div>
 
-            <CardDescription className="text-muted-foreground text-sm">{repo}</CardDescription>
+            <CardDescription className="text-muted-foreground text-[12px] lg:text-sm">
+              {repo}
+            </CardDescription>
           </div>
         </CardHeader>
 
