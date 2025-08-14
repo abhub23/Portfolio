@@ -1,4 +1,6 @@
-export const contributions = [
+import type { OSSContributionCardProps } from './Card';
+
+export const contributions: OSSContributionCardProps[] = [
   // {
   //   title: 'React Query Devtools',
   //   description:

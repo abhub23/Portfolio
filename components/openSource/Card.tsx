@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { GitFork, Star } from 'lucide-react';
 
-interface OSSContributionCardProps {
+export interface OSSContributionCardProps {
   title: string;
   description: string;
   repo: string;
