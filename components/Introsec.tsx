@@ -15,11 +15,31 @@ const Introsec: React.FC = (): JSX.Element => {
     window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
   };
 
+  const Animation = {
+    initial: {
+      opacity: 0,
+      y: 30,
+      filter: 'blur(2px)',
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+    },
+  };
+
+  const Transition = (x: number) => {
+    return {
+      duration: 0.3,
+      easing: 'easeInOut',
+      delay: x,
+    };
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
-      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
+    {...Animation}
+    transition={Transition(0)}
       className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-black/90 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90"
     >
       <div className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]">
@@ -32,27 +52,34 @@ const Introsec: React.FC = (): JSX.Element => {
           priority
         />
       </div>
-      <div className="p-4 pb-1 text-[24px] font-bold lg:text-[42px]">
+      <motion.div
+        {...Animation}
+        transition={Transition(0)} className="p-4 pb-1 text-[24px] font-bold lg:text-[42px]">
         Hey, I&apos;m Abdullah Mukri
-      </div>
+      </motion.div>
 
-      <div className="px-7 pt-1 text-center text-[11px] lg:text-[16px]">
+      <motion.div {...Animation}
+        transition={Transition(0.15)} className="px-7 pt-1 text-center text-[11px] lg:text-[16px]">
         Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
         Typescript and Go.
-      </div>
+      </motion.div>
 
-      <div className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
+      <motion.div {...Animation}
+        transition={Transition(0.30)} className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
-      </div>
+      </motion.div>
 
-      <div className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
+      <motion.div {...Animation}
+        transition={Transition(0.45)} className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
         Want&apos;s to connect or just say hi? please don&apos;t hesitate. feel free to connect!
-      </div>
-      <div className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6">
+      </motion.div>
+
+      <motion.div
+      {...Animation} transition={Transition(0.60)} className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6">
         <Button prop="Book a Meet" onClick={openCal} />
         <Button prop="Get in Touch" onClick={scrollDown} />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
