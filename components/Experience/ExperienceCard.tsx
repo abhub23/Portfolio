@@ -2,10 +2,9 @@
 
 import { motion } from 'motion/react';
 import { ExpTypes } from './Experience';
-import { FC } from 'react';
 import Image from 'next/image';
 
-const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
+const ExperienceCard = ({ org, duration, logo, desc }: ExpTypes) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
@@ -28,7 +27,7 @@ const ExperienceCard: FC<ExpTypes> = ({ org, duration, logo, desc }) => {
         <p className="fixed top-6.5 left-[50px] mr-10 lg:top-8 lg:left-[70px] lg:mr-40">{desc}</p>
       </section>
 
-      <p className="fixed top-2 right-2 text-[10px] font-medium lg:top-3 lg:text-[14px]">
+      <p className="fixed top-2 right-2 text-[10px] font-medium lg:top-3 lg:text-[12px]">
         {duration}
       </p>
     </motion.div>
