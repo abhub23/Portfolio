@@ -61,7 +61,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div {...Animation}
         transition={Transition(1.15)} className="px-7 pt-1 text-center text-[11px] lg:text-[16px]">
-        Hey folks Abdullah this side, a Software Engineer who loves to make cool products using
+        Hey folks I am Abdullah, a Software Engineer hooked on crafting products using
         Typescript and Go.
       </motion.div>
 
@@ -73,7 +73,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div {...Animation}
         transition={Transition(1.45)} className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
-        Want&apos;s to connect or just say hi? please don&apos;t hesitate. feel free to connect!
+        Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel free to connect!
       </motion.div>
 
       <motion.div

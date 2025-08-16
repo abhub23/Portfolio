@@ -22,7 +22,7 @@ const Projects = () => {
       <motion.div
         initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-        transition={{ duration: 0.4, ease: 'easeOut' }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
         className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}
       >
         <p
