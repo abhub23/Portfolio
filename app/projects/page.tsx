@@ -18,7 +18,7 @@ const Projects = () => {
 
   return (
     <div
-      className={cn('bg-neutral-50 dark:bg-neutral-950', pathname == '/projects' ? 'h-screen' : '')}
+      className={cn('bg-neutral-50 dark:bg-neutral-950', pathname == '/projects' && 'h-screen')}
     >
       <motion.div
         initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
