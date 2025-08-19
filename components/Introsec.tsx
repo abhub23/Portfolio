@@ -55,24 +55,24 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1)} className="p-4 pb-1 text-[24px] font-bold lg:text-[42px]">
+        transition={Transition(1)} className="p-4 pb-1 text-[26px] font-bold lg:text-[42px]">
         Hey, I&apos;m Abdullah Mukri
       </motion.div>
-
+    
       <motion.div {...Animation}
-        transition={Transition(1.15)} className="px-7 pt-1 text-center text-[11px] lg:text-[16px]">
+        transition={Transition(1.15)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
         Hey folks I am Abdullah, a Software Engineer hooked on crafting products using
         Typescript and Go.
       </motion.div>
 
       <motion.div {...Animation}
-        transition={Transition(1.30)} className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
+        transition={Transition(1.30)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </motion.div>
 
       <motion.div {...Animation}
-        transition={Transition(1.45)} className="px-9 pt-1 text-center text-[11px] lg:text-[16px]">
+        transition={Transition(1.45)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
         Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel free to connect!
       </motion.div>
 
