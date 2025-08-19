@@ -1,10 +1,11 @@
+import { cn } from '@/lib/utils';
 import { Bricolage } from '@/utils/fonts';
 import Image from 'next/image';
 
 const Github = () => {
   return (
     <div className="mt-8 mb-2 flex flex-col items-center p-3 lg:mt-11 lg:mb-10">
-      <p className={`${Bricolage} mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]`}>
+      <p className={cn('mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]', Bricolage)}>
         Github Activities
       </p>
       <Image

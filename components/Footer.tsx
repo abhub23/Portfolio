@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import { Bricolage } from '@/utils/fonts';
+import { cn } from '@/lib/utils';
 
 const Footer = () => {
   return (
     <div
-      className={`mb-1 flex h-10 items-center justify-center bg-transparent text-[12px] text-neutral-600 lg:text-[16px] dark:text-neutral-400 ${Bricolage}`}
+      className={cn(
+        'mb-1 flex h-10 items-center justify-center bg-transparent text-[12px] text-neutral-600 lg:text-[16px] dark:text-neutral-400',
+        Bricolage
+      )}
     >
       Designed and Developed by
       <Link

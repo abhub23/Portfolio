@@ -23,7 +23,7 @@ const OSContributionCard = ({
 }: OSSContributionCardProps) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className="block">
-      <Card className={`group cursor-pointer transition-shadow duration-200 hover:shadow-md`}>
+      <Card className="group cursor-pointer transition-shadow duration-200 hover:shadow-md">
         <CardHeader>
           <div>
             <div className="flex items-center justify-between">

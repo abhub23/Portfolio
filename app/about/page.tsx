@@ -3,6 +3,7 @@
 import { Bricolage } from '@/utils/fonts';
 import { JSX } from 'react';
 import { motion } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 const About: React.FC = (): JSX.Element => {
   type AboutType = {
@@ -54,7 +55,10 @@ const About: React.FC = (): JSX.Element => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`${Bricolage} mx-auto mt-[140px] mb-[40px] flex w-[340px] flex-col items-center justify-center text-black lg:w-[800px] dark:text-white`}
+        className={cn(
+          'mx-auto mt-[140px] mb-[40px] flex w-[340px] flex-col items-center justify-center text-black lg:w-[800px] dark:text-white',
+          Bricolage
+        )}
       >
         {aboutArr.map((el, idx) => (
           <div key={idx} className="mx-auto flex w-[300px] flex-col justify-start lg:w-[800px]">

@@ -37,12 +37,12 @@ const Introsec: FC = (): JSX.Element => {
   };
 
   return (
-    <div
-      className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90"
-    >
+    <div className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
       <motion.div
         {...Animation}
-        transition={Transition(0.8)} className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]">
+        transition={Transition(0.8)}
+        className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]"
+      >
         <Image
           alt="me"
           src="/me.webp"
@@ -55,29 +55,44 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1)} className="p-4 pb-1 text-[26px] font-bold lg:text-[42px]">
+        transition={Transition(1)}
+        className="p-4 pb-1 text-[26px] font-bold lg:text-[42px]"
+      >
         Hey, I&apos;m Abdullah Mukri
       </motion.div>
-    
-      <motion.div {...Animation}
-        transition={Transition(1.15)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
-        Hey folks I am Abdullah, a Software Engineer hooked on crafting products using
-        Typescript and Go.
+
+      <motion.div
+        {...Animation}
+        transition={Transition(1.15)}
+        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
+      >
+        Hey folks I am Abdullah, a Software Engineer hooked on crafting products using Typescript
+        and Go.
       </motion.div>
 
-      <motion.div {...Animation}
-        transition={Transition(1.30)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
+      <motion.div
+        {...Animation}
+        transition={Transition(1.3)}
+        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
+      >
         I have expertise in wide range of tech but always want to be known as a student of Computer
         science.
       </motion.div>
 
-      <motion.div {...Animation}
-        transition={Transition(1.45)} className="px-4 pt-1 text-center text-[13px] lg:text-[16px]">
-        Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel free to connect!
+      <motion.div
+        {...Animation}
+        transition={Transition(1.45)}
+        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
+      >
+        Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel
+        free to connect!
       </motion.div>
 
       <motion.div
-        {...Animation} transition={Transition(1.60)} className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6">
+        {...Animation}
+        transition={Transition(1.6)}
+        className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6"
+      >
         <Button prop="Book a Meet" onClick={openCal} />
         <Button prop="Get in Touch" onClick={scrollDown} />
       </motion.div>

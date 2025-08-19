@@ -6,11 +6,12 @@ import Connectwithme from '@/components/Connectwithme';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience/Experience';
 import { Bricolage } from '@/utils/fonts';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
     <div className="bg-neutral-50 dark:bg-neutral-950">
-      <div className={`mx-auto w-full max-w-[900px] ${Bricolage}`}>
+      <div className={cn('mx-auto w-full max-w-[900px]', Bricolage)}>
         <Introsec />
         <Projects />
         <Experience />

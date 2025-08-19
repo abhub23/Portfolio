@@ -10,7 +10,12 @@ const WebsiteBtn: React.FC<WeblinkType> = ({ Weblink }) => {
   return (
     <div>
       <Link href={Weblink} target="_blank">
-        <button className={cn('group flex h-6 cursor-pointer items-center justify-center gap-1 rounded-xs border-1 border-neutral-800 bg-red-600 p-1 px-[5px] pt-[5px] text-[10px] font-semibold text-white transition duration-400 lg:border-2 lg:text-xs dark:border-neutral-300',Bricolage)}>
+        <button
+          className={cn(
+            'group flex h-6 cursor-pointer items-center justify-center gap-1 rounded-xs border-1 border-neutral-800 bg-red-600 p-1 px-[5px] pt-[5px] text-[10px] font-semibold text-white transition duration-400 lg:border-2 lg:text-xs dark:border-neutral-300',
+            Bricolage
+          )}
+        >
           <svg
             width={14}
             height={14}

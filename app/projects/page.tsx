@@ -7,6 +7,7 @@ import { motion } from 'motion/react';
 import { projects } from '@/components/project/projects';
 import { useState } from 'react';
 import { Loadbtn } from '@/components/project/Loadbtn';
+import { cn } from '@/lib/utils';
 // import { ChevronDownIcon } from '@radix-ui/themes';
 // import { ChevronUpIcon } from '@radix-ui/react-icons';
 
@@ -17,16 +18,20 @@ const Projects = () => {
 
   return (
     <div
-      className={`bg-neutral-50 dark:bg-neutral-950 ${pathname == '/projects' ? 'h-screen' : ''} `}
+      className={cn('bg-neutral-50 dark:bg-neutral-950', pathname == '/projects' ? 'h-screen' : '')}
     >
       <motion.div
         initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className={`${pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]'}`}
+        className={cn(pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]')}
       >
         <p
-          className={`bg-neutral-50 text-[20px] lg:text-[30px] dark:bg-neutral-950 ${pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]'} flex justify-center p-2 font-semibold lg:mb-4 ${Bricolage}`}
+          className={cn(
+            'flex justify-center bg-neutral-50 p-2 text-[20px] font-semibold lg:mb-4 lg:text-[30px] dark:bg-neutral-950',
+            pathname == '/projects' ? 'mt-[150px]' : 'mt-[80px]',
+            Bricolage
+          )}
         >
           Proof of work
         </p>

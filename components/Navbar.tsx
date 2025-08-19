@@ -19,6 +19,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
 import type { JSX } from 'react';
 import { useDarkmode } from '@/store/useDarkmode';
+import { cn } from '@/lib/utils';
 
 const Navbar: React.FC = (): JSX.Element => {
   const { isDarkmode, toggleDarkmode } = useDarkmode();
@@ -32,7 +33,10 @@ const Navbar: React.FC = (): JSX.Element => {
             <Tooltip content="Home">
               <div className="mt-1 rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <HomeIcon
-                  className={`h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
+                  className={cn(
+                    'h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white',
+                    pathname == '/' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                  )}
                 />
               </div>
             </Tooltip>
@@ -42,7 +46,10 @@ const Navbar: React.FC = (): JSX.Element => {
             <Tooltip content="Projects">
               <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <CodeIcon
-                  className={`h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/projects' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
+                  className={cn(
+                    'h-[19px] w-[19px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white',
+                    pathname == '/projects' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                  )}
                 />
               </div>
             </Tooltip>
@@ -52,7 +59,10 @@ const Navbar: React.FC = (): JSX.Element => {
             <Tooltip content="Open source">
               <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <GitPullRequestArrow
-                  className={`h-[16px] w-[16px] text-black max-sm:h-[13px] max-sm:w-[13px] dark:text-white ${pathname.startsWith('/opensource') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
+                  className={cn(
+                    'h-[16px] w-[16px] text-black max-sm:h-[13px] max-sm:w-[13px] dark:text-white',
+                    pathname.startsWith('/opensource') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                  )}
                 />
               </div>
             </Tooltip>
@@ -62,7 +72,10 @@ const Navbar: React.FC = (): JSX.Element => {
             <Tooltip content="About">
               <div className="rounded-full py-2.5 transition-all duration-300 hover:bg-[#F4F4F5] hover:px-3 max-sm:hover:px-2 dark:hover:bg-[#262626]">
                 <IoPerson
-                  className={`h-[18px] w-[18px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white ${pathname == '/about' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''}`}
+                  className={cn(
+                    'h-[18px] w-[18px] text-black max-sm:h-[15px] max-sm:w-[15px] dark:text-white',
+                    pathname == '/about' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                  )}
                 />
               </div>
             </Tooltip>
