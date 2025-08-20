@@ -11,7 +11,7 @@ const Github = () => {
       <Image
         src="https://ghchart.rshah.org/158a17/abhub23"
         alt="Github Chart"
-        width={780}
+        width={760}
         height={500}
         unoptimized={true}
         loading="lazy"

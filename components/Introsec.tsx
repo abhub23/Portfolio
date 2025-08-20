@@ -4,6 +4,7 @@ import { JSX, FC } from 'react';
 import Button from '../components/Button';
 import Image from 'next/image';
 import { motion } from 'motion/react';
+import { Animation, Transition } from '@/lib/animation';
 
 const Introsec: FC = (): JSX.Element => {
   const openCal = () => {
@@ -15,32 +16,11 @@ const Introsec: FC = (): JSX.Element => {
     window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
   };
 
-  const Animation = {
-    initial: {
-      opacity: 0,
-      y: 30,
-      filter: 'blur(2px)',
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-    },
-  };
-
-  const Transition = (x: number) => {
-    return {
-      duration: 0.4,
-      easing: 'easeInOut',
-      delay: x,
-    };
-  };
-
   return (
     <div className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
       <motion.div
         {...Animation}
-        transition={Transition(0.8)}
+        transition={Transition(0.6)}
         className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]"
       >
         <Image
@@ -55,7 +35,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1)}
+        transition={Transition(0.8)}
         className="p-4 pb-1 text-[26px] font-bold lg:text-[42px]"
       >
         Hey, I&apos;m Abdullah Mukri
@@ -72,7 +52,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1.3)}
+        transition={Transition(1.25)}
         className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
       >
         I have expertise in wide range of tech but always want to be known as a student of Computer
@@ -81,7 +61,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1.45)}
+        transition={Transition(1.35)}
         className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
       >
         Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel
@@ -90,7 +70,7 @@ const Introsec: FC = (): JSX.Element => {
 
       <motion.div
         {...Animation}
-        transition={Transition(1.6)}
+        transition={Transition(1.45)}
         className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6"
       >
         <Button prop="Book a Meet" onClick={openCal} />

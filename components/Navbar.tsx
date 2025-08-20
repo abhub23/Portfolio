@@ -7,13 +7,11 @@ import {
   SunIcon,
   MoonIcon,
   FileIcon,
-  RowsIcon,
   LinkedInLogoIcon,
   CodeIcon,
   HomeIcon,
 } from '@radix-ui/react-icons';
-import { GitPullRequestArrow, Terminal } from 'lucide-react';
-
+import { GitPullRequestArrow } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';

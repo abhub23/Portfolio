@@ -8,6 +8,7 @@ import { projects } from '@/components/project/projects';
 import { useState } from 'react';
 import { Loadbtn } from '@/components/project/Loadbtn';
 import { cn } from '@/lib/utils';
+import { Animation, Transition } from '@/lib/animation';
 // import { ChevronDownIcon } from '@radix-ui/themes';
 // import { ChevronUpIcon } from '@radix-ui/react-icons';
 
@@ -17,13 +18,10 @@ const Projects = () => {
   const [num, setNum] = useState(6);
 
   return (
-    <div
-      className={cn('bg-neutral-50 dark:bg-neutral-950', pathname == '/projects' && 'h-screen')}
-    >
+    <div className={cn('bg-neutral-50 dark:bg-neutral-950', pathname == '/projects' && 'h-screen')}>
       <motion.div
-        initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
-        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-        transition={{ duration: 0.4, ease: 'easeInOut' }}
+        {...Animation}
+        transition={Transition(0)}
         className={cn(pathname == '/projects' ? 'mb-[30px]' : 'mb-[1px]')}
       >
         <p
