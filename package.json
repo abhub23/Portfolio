@@ -11,6 +11,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "lint": "pnpm next lint",
     "fmt": "prettier -w ."
   },
   "dependencies": {
