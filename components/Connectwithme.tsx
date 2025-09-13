@@ -9,7 +9,6 @@ import { GrSchedules } from 'react-icons/gr';
 import { toast } from 'sonner';
 
 const Connectwithme: React.FC = (): JSX.Element => {
-  //const { name, setName } = useName()
   const { email, setEmail } = useEmail();
   const { message, setMessage } = useMessage();
   const { sendMessage, setSendMessage } = useSendMessage();
@@ -58,7 +57,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         'https://portfolio-backend-ten-ebon.vercel.app/api/sendmessage',
         { email, message }
       );
-      console.log(res.data.Success);
+
       if (res.data.Success) {
         setSendMessage(false);
         handleMessageSuccess();
