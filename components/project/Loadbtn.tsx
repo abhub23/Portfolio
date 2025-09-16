@@ -1,12 +1,7 @@
 import { cn } from '@/lib/utils';
 import { Bricolage } from '@/utils/fonts';
-import { FC, JSX } from 'react';
-
-type BtnType = {
-  name: string;
-  onClick: () => void;
-  icon: JSX.Element;
-};
+import { FC } from 'react';
+import { BtnType } from '@/types/components/project';
 
 export const Loadbtn: FC<BtnType> = ({ name, onClick, icon }) => {
   return (
