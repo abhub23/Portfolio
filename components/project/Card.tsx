@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { Cardprops } from '@/types/components/project';
+import type { Cardprops } from '@/types/components/project-types';
 
 const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => {
   return (

@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils';
 import { Bricolage } from '@/utils/fonts';
 import { FC } from 'react';
-import { BtnType } from '@/types/components/project';
+import type { BtnProps } from '@/types/components/project-types';
 
-export const Loadbtn: FC<BtnType> = ({ name, onClick, icon }) => {
+export const Loadbtn: FC<BtnProps> = ({ name, onClick, icon }) => {
   return (
     <button
       onClick={onClick}
