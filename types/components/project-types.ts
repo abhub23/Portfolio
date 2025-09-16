@@ -9,7 +9,7 @@ export type Cardprops = {
     Imglink: React.HTMLInputTypeAttribute;
   };
 
-export type BtnType = {
+export type BtnProps = {
     name: string;
     onClick: () => void;
     icon: JSX.Element;
