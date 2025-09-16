@@ -1,4 +1,4 @@
-import type { OSSContributionCardProps } from './Card';
+import type { OSSContributionCardProps } from '@/types/components/OSS-types';
 
 export const contributions: OSSContributionCardProps[] = [
   // {

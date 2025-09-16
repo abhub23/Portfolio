@@ -1,16 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { GitFork, Star } from 'lucide-react';
-
-export interface OSSContributionCardProps {
-  title: string;
-  description: string;
-  repo: string;
-  url: string;
-  language?: string;
-  stars?: number;
-  forks?: number;
-}
+import type { OSSContributionCardProps } from '@/types/components/OSS-types';
 
 const OSContributionCard = ({
   title,
