@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Email, Message, SendMessage } from '@/types/types';
+import { Email, Message, SendMessage } from '@/types/state-types';
 
 export const useEmail = create<Email>((set) => ({
   email: '',
