@@ -5,15 +5,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-
-type Cardprops = {
-  Title: string;
-  Desc: string;
-  SrcLink: string;
-  WebLink: string;
-  Skills: string[];
-  Imglink: React.HTMLInputTypeAttribute;
-};
+import { Cardprops } from '@/types/components/project';
 
 const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => {
   return (
