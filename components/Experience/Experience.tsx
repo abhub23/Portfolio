@@ -1,11 +1,5 @@
 import ExperienceCard from './ExperienceCard';
-
-export type ExpTypes = {
-  org: string;
-  duration: string;
-  logo?: string;
-  desc: string;
-};
+import type { ExpTypes } from '@/types/components/experience-types';
 
 const Exp: ExpTypes[] = [
   {

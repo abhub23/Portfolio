@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ExpTypes } from './Experience';
+import type { ExpTypes } from '@/types/components/experience-types';
 import Image from 'next/image';
 
 const ExperienceCard = ({ org, duration, logo, desc }: ExpTypes) => {
