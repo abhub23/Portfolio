@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
         {skills.map((el, idx) => (
           <div
             key={idx}
-            className="mx-[4px] h-[18px] cursor-pointer rounded-[4px] border-1 border-black/80 bg-black/90 p-[2px] px-[4px] text-center text-[8px] font-semibold text-white lg:mx-[4px] lg:h-[24px] lg:p-[2px] lg:px-[8px] lg:text-[12px] dark:border-white/80 dark:bg-white dark:text-black"
+            className="mx-[4px] h-[18px] rounded-[4px] border-1 border-black/80 bg-black/90 p-[2px] px-[4px] text-center text-[8px] font-semibold text-white lg:mx-[4px] lg:h-[24px] lg:p-[2px] lg:px-[8px] lg:text-[12px] dark:border-white/80 dark:bg-white dark:text-black"
           >
             {el}
           </div>
