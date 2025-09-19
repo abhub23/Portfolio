@@ -50,7 +50,7 @@ const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => 
         {Skills.map((el) => (
           <p
             key={el}
-            className="ml-[2px] h-[18px] cursor-pointer rounded-[3px] border-1 border-neutral-500 p-[2px] px-[4px] text-[10px] text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-white lg:h-[20px] lg:text-[11px] dark:border-neutral-500 dark:text-white dark:hover:bg-white hover:dark:text-black"
+            className="ml-[2px] h-[18px] rounded-[3px] border-1 border-neutral-500 p-[2px] px-[4px] text-[10px] text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-white lg:h-[20px] lg:text-[11px] dark:border-neutral-500 dark:text-white dark:hover:bg-white hover:dark:text-black"
           >
             {el}
           </p>
