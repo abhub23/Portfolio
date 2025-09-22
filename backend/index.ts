@@ -39,8 +39,8 @@ const getDate = () => {
 };
 
 //Server check
-app.get('/', (_, res) => {
-  res.json({ message: 'Server is alive' });
+app.get('/health', (_, res) => {
+  res.status(200).json({ message: 'Server is healthy' });
 });
 
 app.post('/api/sendmessage', async (req: Request<{}, {}, UserBody>, res: any) => {
@@ -49,7 +49,7 @@ app.post('/api/sendmessage', async (req: Request<{}, {}, UserBody>, res: any) =>
   if (!InputValidation.success) {
     return res.status(400).json({
       message: 'Zod validation failed',
-      Error: InputValidation.error.flatten().fieldErrors,
+      error: InputValidation.error.flatten().fieldErrors,
     });
   }
   const { email, message } = InputValidation.data;
@@ -75,14 +75,14 @@ app.post('/api/sendmessage', async (req: Request<{}, {}, UserBody>, res: any) =>
     });
 
     return res.status(200).json({
-      Success: true,
-      Message: 'Data added to the DB',
+      success: true,
+      message: 'Data added to the DB',
     });
   } catch (error) {
     console.error('Error occured while adding data to DB : ', error);
 
     return res.status(500).json({
-      Success: false,
+      success: false,
     });
   }
 });
