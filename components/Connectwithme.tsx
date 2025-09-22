@@ -58,7 +58,7 @@ const Connectwithme: React.FC = (): JSX.Element => {
         { email, message }
       );
 
-      if (res.data.Success) {
+      if (res.data.success) {
         setSendMessage(false);
         handleMessageSuccess();
       } else {
