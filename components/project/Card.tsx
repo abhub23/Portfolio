@@ -18,9 +18,9 @@ const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => 
       <ShineBorder
         className="rounded-sm"
         shineColor={[
-          'oklch(71.8% 0.202 349.761)',
-          'oklch(74% 0.238 322.16)',
-          'oklch(70.2% 0.183 293.541)',
+          'oklch(55.6% 0 0)',
+          'oklch(83.3% 0.145 321.434)',
+          'oklch(81.1% 0.111 293.571)',
         ]}
       />
       <div className="group relative w-[290px]">
