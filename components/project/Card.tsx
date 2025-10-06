@@ -26,7 +26,7 @@ const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => 
       <div className="group relative w-[290px]">
         <div className="flex items-center justify-start">
           <h3 className="mt-[4px] ml-[8px] transform text-[18px] leading-6 font-semibold text-black transition-all duration-500 ease-in-out hover:scale-105 hover:text-rose-600 lg:w-fit dark:text-white">
-            <a href={WebLink}>
+            <a href={WebLink} target='_blank'>
               <span className="absolute inset-0 max-w-xs" />
               {Title}
             </a>
