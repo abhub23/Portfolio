@@ -75,4 +75,20 @@ export const projects = [
     ],
     imgLink: '/cat.webp',
   },
+  {
+    title: 'Draw',
+    desc: 'Draw app that lets you sketch freely with smooth strokes, vibrant colors, and an intuitive interface, delivering a fast, minimal, and immersive digital drawing experience.',
+    srcLink: 'https://github.com/abhub23/draw',
+    webLink: 'https://draw.abdullahtech.dev/',
+    skills: [
+      'Typescript',
+      'Next js',
+      'React',
+      'Cat Images Api',
+      'TailwindCSS',
+      'Vercel',
+      'Zustand',
+    ],
+    imgLink: '/cat.webp',
+  },
 ];
