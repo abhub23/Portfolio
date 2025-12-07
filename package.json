@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "pnpm next lint",
-    "fmt": "prettier -w ."
+    "fmt": "bunx prettier -w ."
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
@@ -22,6 +22,7 @@
     "axios": "^1.8.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.24",
     "lenis": "^1.3.9",
     "lucide-react": "^0.487.0",
     "monorepo": "github:radix-ui/themes",
