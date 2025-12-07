@@ -1,20 +1,6 @@
 import ExperienceCard from './ExperienceCard';
 import type { ExpTypes } from '@/types/components/experience-types';
 
-const Exp: ExpTypes[] = [
-  {
-    org: 'Kanexon Inc',
-    duration: 'Feb 2025 - June 2025',
-    logo: '/kannectlogo.png',
-    desc: 'Fullstack Developer/ Engineer',
-  },
-  {
-    org: 'Oasis Infobyte',
-    duration: 'Oct 2023 - Apr 2024',
-    logo: '/icon.webp',
-    desc: 'Software Development Engineer, Intern',
-  },
-];
 
 const Experience = () => {
   return (
@@ -23,11 +9,7 @@ const Experience = () => {
         Experience
       </span>
 
-      {Exp.map((val, idx) => (
-        <div key={idx} className="flex justify-center pt-[4px] lg:pt-[4px]">
-          <ExperienceCard org={val.org} desc={val.desc} duration={val.duration} logo={val.logo} />
-        </div>
-      ))}
+      <ExperienceCard/>
     </>
   );
 };

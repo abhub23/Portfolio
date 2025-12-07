@@ -2,5 +2,6 @@ export type ExpTypes = {
   org: string;
   duration: string;
   logo?: string;
-  desc: string;
+  role: string;
+  link: string;
 };

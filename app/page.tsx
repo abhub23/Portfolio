@@ -18,7 +18,7 @@ export default function Home() {
       <div className={cn('mx-auto w-full max-w-[900px]', Bricolage)}>
         <Introsec />
         <Projects />
-        <Experience />
+        <Experience/>
         <Github />
         <Skills />
         <Connectwithme />
