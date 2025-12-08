@@ -27,7 +27,7 @@
     "lucide-react": "^0.487.0",
     "monorepo": "github:radix-ui/themes",
     "motion": "^12.6.5",
-    "next": "^15.2.4",
+    "next": "15.2.6",
     "postcss": "^8.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "react": "^19.0.0",
@@ -46,7 +46,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.1.7",
+    "eslint-config-next": "15.2.6",
     "prettier": "^3.5.2",
     "typescript": "5.8.3"
   }
