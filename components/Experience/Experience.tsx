@@ -1,7 +1,6 @@
 import ExperienceCard from './ExperienceCard';
 import type { ExpTypes } from '@/types/components/experience-types';
 
-
 const Experience = () => {
   return (
     <>
@@ -9,7 +8,7 @@ const Experience = () => {
         Experience
       </span>
 
-      <ExperienceCard/>
+      <ExperienceCard />
     </>
   );
 };

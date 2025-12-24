@@ -10,7 +10,7 @@ import { ExpTypes } from '@/types/components/experience-types';
 const Experience = () => {
   const { isDarkmode } = useDarkmode();
   return (
-    <div className="mt-4 flex w-[750px] flex-col items-center mx-auto  pb-8 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5">
+    <div className="mx-auto mt-4 flex w-[750px] flex-col items-center pb-8 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5">
       {experience.map((exp: ExpTypes) => (
         <MagicCard
           key={exp.org}
