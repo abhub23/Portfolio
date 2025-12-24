@@ -41,7 +41,7 @@ export const projects = [
     srcLink: 'https://github.com/abhub23/Github-Metrics',
     webLink: 'https://githubstats.abdullahtech.dev',
     skills: ['Typescript', 'React', 'Express', 'TailwindCSS', 'Vite', 'Gemini', 'Zustand'],
-    imgLink: '/githublogo.png',
+    imgLink: '/projects/githublogo.png',
   },
   {
     title: 'React Flip Game',
