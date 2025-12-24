@@ -15,7 +15,7 @@ export const projects = [
       'TailwindCSS',
       'Vercel',
     ],
-    imgLink: '/purgeailogo.webp',
+    imgLink: '/projects/purgeailogo.webp',
   },
   {
     title: 'Privado',
@@ -33,7 +33,7 @@ export const projects = [
       'Golang',
       'Vercel',
     ],
-    imgLink: '/chat.png',
+    imgLink: '/projects/chat.png',
   },
   {
     title: 'Github Metrics',
@@ -49,7 +49,7 @@ export const projects = [
     srcLink: 'https://github.com/abhub23/React-Flip-Game',
     webLink: 'https://flipgame.abdullahtech.dev/',
     skills: ['Typescript', 'React', 'TailwindCSS', 'next - themes', 'grids', 'Vercel', 'Zustand'],
-    imgLink: '/flipgame.webp',
+    imgLink: '/projects/flipgame.webp',
   },
   {
     title: 'Go Http Server',
@@ -57,7 +57,7 @@ export const projects = [
     srcLink: 'https://github.com/abhub23/http-Server-Go',
     webLink: 'https://github.com/abhub23/http-Server-Go',
     skills: ['Golang', 'Networking', 'HTTP', 'Operating System', 'TCP', 'Sys Calls', 'Unix'],
-    imgLink: '/gologo.webp',
+    imgLink: '/projects/gologo.webp',
   },
   {
     title: 'Cat Capture',
@@ -73,7 +73,7 @@ export const projects = [
       'Vercel',
       'Zustand',
     ],
-    imgLink: '/cat.webp',
+    imgLink: '/projects/cat.webp',
   },
   {
     title: 'Draw',
@@ -89,6 +89,6 @@ export const projects = [
       'Vercel',
       'Zustand',
     ],
-    imgLink: '/cat.webp',
+    imgLink: '/projects/cat.webp',
   },
 ];
