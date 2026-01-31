@@ -88,7 +88,7 @@ const Navbar: React.FC = (): JSX.Element => {
           </span>
 
           <Link
-            href="https://drive.google.com/file/d/1h6o2y-1ys7rIH7R4V17f8Gw8-ZoK9EKl/view"
+            href="https://drive.google.com/file/d/1ZLypUsoIu7Exlxx8TsTL55DdnJSDmzuW/view"
             target="_blank"
             underline="none"
           >
