@@ -1,5 +1,4 @@
 import ExperienceCard from './ExperienceCard';
-import type { ExpTypes } from '@/types/components/experience-types';
 
 const Experience = () => {
   return (
