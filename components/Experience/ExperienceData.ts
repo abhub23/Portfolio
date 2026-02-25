@@ -5,14 +5,14 @@ const experience: ExpTypes[] = [
     org: 'Sylow AI',
     duration: 'Oct 2025 - present',
     logo: '/company/sylow.png',
-    role: 'Fullstack Engineer',
+    role: 'Fullstack Software Engineer',
     link: 'https://www.sylow.ai/',
   },
   {
     org: 'Kanexon Inc',
     duration: 'Feb 2025 - June 2025',
     logo: '/company/kannect.png',
-    role: 'Fullstack Engineer',
+    role: 'Fullstack Software Developer',
     link: 'https://kannect.co/',
   },
   {

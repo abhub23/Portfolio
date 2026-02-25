@@ -27,8 +27,8 @@ const Experience = () => {
                 <Image
                   src={exp.logo}
                   alt="company-logo"
-                  width={50}
-                  height={50}
+                  width={40}
+                  height={40}
                   className={`rounded-full`}
                 />
               </Link>
@@ -36,9 +36,9 @@ const Experience = () => {
             <div className="w-full text-start">
               <div className={`${exp.role === 'Freelance' ? 'max-lg:ml-2 max-sm:ml-2' : ''}`}>
                 <div
-                  className={`flex w-[41vw] !justify-between max-lg:w-full max-sm:w-full max-sm:items-center ${Bricolage}`}
+                  className={`flex w-[41vw] justify-between! max-lg:w-full max-sm:w-full max-sm:items-center ${Bricolage}`}
                 >
-                  <div className="mb-1 text-lg !leading-4 font-semibold max-sm:text-base">
+                  <div className="mb-1 text-lg !leading-4 font-medium max-sm:text-[15px]">
                     {exp.role}
                   </div>
                   <div className={`text-xs max-sm:hidden max-sm:text-[10px]`}>{exp.duration}</div>
