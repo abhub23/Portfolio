@@ -50,7 +50,7 @@ const Introsec: FC = (): JSX.Element => {
         <span className="rounded-lg bg-neutral-300 p-1 px-[6px] dark:bg-neutral-700">
           2 years of experience
         </span>{' '}
-        as a Software Engineer, crafting products using Typescript and Go.
+        as a Software Engineer, crafting products using Typescript.
       </motion.div>
 
       <motion.div
