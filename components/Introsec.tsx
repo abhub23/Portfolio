@@ -46,11 +46,11 @@ const Introsec: FC = (): JSX.Element => {
         transition={Transition(1.15)}
         className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
       >
-        I am Abdullah, I have{' '}
+        I have{' '}
         <span className="rounded-lg bg-neutral-300 p-1 px-[6px] dark:bg-neutral-700">
           2 years of experience
         </span>{' '}
-        as a Software Engineer, crafting products using Typescript.
+        as a Fullstack Software Engineer, crafting products using Typescript and Go.
       </motion.div>
 
       <motion.div
