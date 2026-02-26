@@ -7,7 +7,7 @@ const skills: Array<string> = [
   'Node Js',
   'Tailwind',
   'PostgreSQL',
-  'Prisma',
+  'Drizzle',
   'Tanstack',
   'Bun js',
   'Zustand',
@@ -20,7 +20,7 @@ const skills: Array<string> = [
   'Vercel',
 ];
 
-const Skills: React.FC = () => {
+function Skills() {
   return (
     <div className="mx-auto mb-[40px] h-[110px] w-[350px] lg:mb-[40px] lg:h-[160px] lg:w-[760px]">
       <div className="mx-auto mb-[10px] text-center text-[20px] font-semibold text-black lg:mb-[18px] lg:p-[2px] lg:text-[30px] dark:text-white">
@@ -38,6 +38,6 @@ const Skills: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Skills;

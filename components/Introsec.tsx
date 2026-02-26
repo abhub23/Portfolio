@@ -1,12 +1,11 @@
 'use client';
 
-import { JSX, FC } from 'react';
 import Button from '../components/Button';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Animation, Transition } from '@/lib/animation';
 
-const Introsec: FC = (): JSX.Element => {
+function Introsec() {
   const openCal = () => {
     window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank');
   };
@@ -81,6 +80,6 @@ const Introsec: FC = (): JSX.Element => {
       </motion.div>
     </div>
   );
-};
+}
 
 export default Introsec;

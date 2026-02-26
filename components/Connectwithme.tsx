@@ -1,14 +1,13 @@
 'use client';
 
 import { useRef } from 'react';
-import { JSX } from 'react';
 import { useEmail, useMessage, useSendMessage } from '@/store/Connectwithme';
 import axios from 'axios';
 import { FaXTwitter } from 'react-icons/fa6';
 import { GrSchedules } from 'react-icons/gr';
 import { toast } from 'sonner';
 
-const Connectwithme: React.FC = (): JSX.Element => {
+function Connectwithme() {
   const { email, setEmail } = useEmail();
   const { message, setMessage } = useMessage();
   const { sendMessage, setSendMessage } = useSendMessage();
@@ -130,6 +129,6 @@ const Connectwithme: React.FC = (): JSX.Element => {
       </button>
     </div>
   );
-};
+}
 
 export default Connectwithme;

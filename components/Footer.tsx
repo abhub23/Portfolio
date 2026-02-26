@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Bricolage } from '@/utils/fonts';
 import { cn } from '@/lib/utils';
 
-const Footer = () => {
+function Footer() {
   return (
     <div
       className={cn(
@@ -20,6 +20,6 @@ const Footer = () => {
       </Link>
     </div>
   );
-};
+}
 
 export default Footer;

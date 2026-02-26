@@ -14,11 +14,10 @@ import {
 import { GitPullRequestArrow } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
-import type { JSX } from 'react';
 import { useDarkmode } from '@/store/useDarkmode';
 import { cn } from '@/lib/utils';
 
-const Navbar: React.FC = (): JSX.Element => {
+function Navbar() {
   const { isDarkmode, toggleDarkmode } = useDarkmode();
   const pathname = usePathname();
 
@@ -126,7 +125,7 @@ const Navbar: React.FC = (): JSX.Element => {
                 {isDarkmode == 'dark' ? (
                   <MoonIcon className="size-[16px] cursor-pointer text-white lg:size-[20px]" />
                 ) : (
-                  <SunIcon className="h-5 w-5 cursor-pointer max-sm:h-[15px] max-sm:w-[15px]" />
+                  <SunIcon className="size-[16px] cursor-pointer lg:size-[20px]" />
                 )}
               </button>
             </div>
@@ -135,6 +134,6 @@ const Navbar: React.FC = (): JSX.Element => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
