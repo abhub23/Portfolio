@@ -1,11 +1,11 @@
 'use client';
 
-import Button from '../components/Button';
+import Button from './Button';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Animation, Transition } from '@/lib/animation';
 
-function Introsec() {
+function IntroSection() {
   const openCal = () => {
     window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank');
   };
@@ -82,4 +82,4 @@ function Introsec() {
   );
 }
 
-export default Introsec;
+export default IntroSection;

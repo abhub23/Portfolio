@@ -7,7 +7,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { GrSchedules } from 'react-icons/gr';
 import { toast } from 'sonner';
 
-function Connectwithme() {
+function Connect() {
   const { email, setEmail } = useEmail();
   const { message, setMessage } = useMessage();
   const { sendMessage, setSendMessage } = useSendMessage();
@@ -131,4 +131,4 @@ function Connectwithme() {
   );
 }
 
-export default Connectwithme;
+export default Connect;
