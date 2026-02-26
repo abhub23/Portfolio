@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { GitFork, Star } from 'lucide-react';
 import type { OSSContributionCardProps } from '@/types/components/OSS-types';
 
-const OSContributionCard = ({
+function OSContributionCard({
   title,
   description,
   repo,
@@ -11,7 +11,7 @@ const OSContributionCard = ({
   language,
   stars,
   forks,
-}: OSSContributionCardProps) => {
+}: OSSContributionCardProps) {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className="block">
       <Card className="group cursor-pointer transition-shadow duration-200 hover:shadow-md">
@@ -55,6 +55,6 @@ const OSContributionCard = ({
       </Card>
     </a>
   );
-};
+}
 
 export default OSContributionCard;

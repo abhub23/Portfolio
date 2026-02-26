@@ -7,7 +7,7 @@ import { useDarkmode } from '@/store/useDarkmode';
 import experience from './ExperienceData';
 import { ExpTypes } from '@/types/components/experience-types';
 
-const Experience = () => {
+function Experience() {
   const { isDarkmode } = useDarkmode();
   return (
     <div className="mx-auto mt-4 flex w-[750px] flex-col items-center pb-8 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5">
@@ -54,6 +54,6 @@ const Experience = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Experience;

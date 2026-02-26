@@ -5,7 +5,7 @@ import { Bricolage } from '@/utils/fonts';
 import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
-const ErrorPage = () => {
+function ErrorPage() {
   const router = useRouter();
   const handleHome = () => {
     router.push('/');
@@ -36,6 +36,6 @@ const ErrorPage = () => {
       </motion.div>
     </div>
   );
-};
+}
 
 export default ErrorPage;

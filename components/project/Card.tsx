@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bricolage } from '@/utils/fonts';
 import { ShineBorder } from '@/components/magicui/shine-border';
 import Image from 'next/image';
@@ -7,11 +6,11 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import type { Cardprops } from '@/types/components/project-types';
 
-const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => {
+function Card({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) {
   return (
     <article
       className={cn(
-        'relative flex w-[310px] flex-col items-center justify-between rounded-sm border-[1px] border-zinc-300/80 bg-neutral-50 p-6 lg:w-[340px] dark:border-zinc-800 dark:bg-neutral-950',
+        'relative flex w-[310px] flex-col items-center justify-between rounded-sm border border-zinc-300/80 bg-neutral-50 p-6 lg:w-[340px] dark:border-zinc-800 dark:bg-neutral-950',
         Bricolage
       )}
     >
@@ -50,7 +49,7 @@ const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => 
         {Skills.map((el) => (
           <p
             key={el}
-            className="ml-[2px] h-[18px] rounded-[3px] border-1 border-neutral-500 p-[2px] px-[4px] text-[10px] text-black transition-all duration-300 ease-in-out lg:h-[20px] lg:text-[11px] dark:border-neutral-500 dark:text-white"
+            className="ml-[2px] h-[18px] rounded-[3px] border border-neutral-500 p-[2px] px-[4px] text-[10px] text-black transition-all duration-300 ease-in-out lg:h-[20px] lg:text-[11px] dark:border-neutral-500 dark:text-white"
           >
             {el}
           </p>
@@ -98,6 +97,6 @@ const Card = ({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) => 
       </div>
     </article>
   );
-};
+}
 
 export default Card;

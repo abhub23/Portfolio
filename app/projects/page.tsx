@@ -12,7 +12,7 @@ import { Animation, Transition } from '@/lib/animation';
 // import { ChevronDownIcon } from '@radix-ui/themes';
 // import { ChevronUpIcon } from '@radix-ui/react-icons';
 
-const Projects = () => {
+function Projects() {
   const pathname = usePathname();
 
   const [num, setNum] = useState(6);
@@ -59,6 +59,6 @@ const Projects = () => {
       </motion.div>
     </div>
   );
-};
+}
 
 export default Projects;
