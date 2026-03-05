@@ -11,7 +11,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "pnpm next lint",
+    "lint": "bun next lint",
     "fmt": "bunx prettier -w ."
   },
   "dependencies": {
