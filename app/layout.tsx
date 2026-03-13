@@ -8,7 +8,7 @@ import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abdullahtech.dev'),
-  title: 'Abdullah | Fullstack Engineer',
+  title: 'Abdullah Mukri',
   icons: {
     icon: '/company/icon.webp',
   },
