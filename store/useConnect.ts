@@ -8,7 +8,6 @@ const useConnect = create<ConnectType>((set) => ({
   setEmail: (newemail: string) => set({ email: newemail }),
   setMessage: (newmessage: string) => set({ message: newmessage }),
   setSendMessage: (newmessage: boolean) => set({ sendMessage: newmessage }),
-
 }));
 
-export default useConnect
+export default useConnect;
