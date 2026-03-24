@@ -1,14 +1,10 @@
-export type Email = {
+type ConnectType = {
   email: string;
-  setEmail: (newemail: string) => void;
-};
-
-export type Message = {
   message: string;
-  setMessage: (newmessage: string) => void;
-};
-
-export type SendMessage = {
   sendMessage: boolean;
+  setEmail: (newemail: string) => void;
+  setMessage: (newmessage: string) => void;
   setSendMessage: (newmessage: boolean) => void;
 };
+
+export default ConnectType;

@@ -22,11 +22,11 @@ const skills: Array<string> = [
 
 function Skills() {
   return (
-    <div className="mx-auto mb-[40px] h-[110px] w-[350px] lg:mb-[40px] lg:h-[160px] lg:w-[760px]">
+    <div className="mx-auto mb-[40px] h-[110px] w-[350px] lg:mb-[40px] lg:h-[160px] lg:w-[700px]">
       <div className="mx-auto mb-[10px] text-center text-[20px] font-semibold text-black lg:mb-[18px] lg:p-[2px] lg:text-[30px] dark:text-white">
         Skills
       </div>
-      <div className="mx-auto flex h-[75px] w-[335px] flex-wrap justify-center gap-[2px] px-[2px] lg:h-[70px] lg:w-[760px] lg:px-[4px]">
+      <div className="mx-auto flex h-[75px] w-[335px] flex-wrap justify-center gap-[2px] px-[2px] lg:h-[70px] lg:w-[700px] lg:px-[4px]">
         {skills.map((el, idx) => (
           <div
             key={idx}

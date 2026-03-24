@@ -15,7 +15,7 @@ export default function Home() {
   useSmoothScroll();
   return (
     <div className="bg-neutral-50 dark:bg-neutral-950">
-      <div className={cn('mx-auto w-full max-w-[900px]', Bricolage)}>
+      <div className={cn('mx-auto w-full max-w-[700px]', Bricolage)}>
         <IntroSection />
         <Projects />
         <Experience />

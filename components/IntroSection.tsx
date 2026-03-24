@@ -16,7 +16,7 @@ function IntroSection() {
   };
 
   return (
-    <div className="mt-[120px] flex flex-col items-center justify-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
+    <div className="mx-auto mt-[120px] flex flex-col items-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
       <motion.div
         {...Animation}
         transition={Transition(0.6)}
@@ -35,49 +35,38 @@ function IntroSection() {
       <motion.div
         {...Animation}
         transition={Transition(0.8)}
-        className="p-4 pb-1 text-[26px] font-bold lg:text-[42px]"
+        className="w-full p-4 pb-1 text-left text-[26px] font-bold lg:text-[42px]"
       >
         Hey, I&apos;m Abdullah Mukri
       </motion.div>
 
-      <motion.div
-        {...Animation}
-        transition={Transition(1.15)}
-        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
-      >
-        I have{' '}
-        <span className="rounded-lg bg-neutral-300 p-1 px-[6px] dark:bg-neutral-700">
-          2 years of experience
-        </span>{' '}
-        as a Fullstack Software Engineer, crafting products using Typescript and Go.
-      </motion.div>
+      <div className="pl-4">
+        <motion.div
+          {...Animation}
+          transition={Transition(1.15)}
+          className="text-left text-[13px] lg:text-[16px]"
+        >
+          <span className="mb-2 block text-[14px] font-semibold lg:text-[18px]">About</span>
+          {/* I have{' '} */}
+          {/* <span className="rounded-lg bg-neutral-200 p-1 px-[6px] dark:bg-neutral-700">
+            2 years of experience
+          </span>{' '}
+          as a  */}
+          Fullstack Software Engineer, crafting products using Typescript and Go. I have expertise
+          in wide range of tech but always want to be known as a student of Computer science.
+          Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel
+          free to connect!
+        </motion.div>
 
-      <motion.div
-        {...Animation}
-        transition={Transition(1.25)}
-        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
-      >
-        I have expertise in wide range of tech but always want to be known as a student of Computer
-        science.
-      </motion.div>
-
-      <motion.div
-        {...Animation}
-        transition={Transition(1.35)}
-        className="px-4 pt-1 text-center text-[13px] lg:text-[16px]"
-      >
-        Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel
-        free to connect!
-      </motion.div>
-
-      <motion.div
-        {...Animation}
-        transition={Transition(1.45)}
-        className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6"
-      >
-        <Button prop="Book a Meet" onClick={openCal} />
-        <Button prop="Get in Touch" onClick={scrollDown} />
-      </motion.div>
+        <motion.div
+          {...Animation}
+          transition={Transition(1.45)}
+          className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6"
+        >
+          <Button prop="Book a Meet" onClick={openCal} />
+          <Button prop="Get in Touch" onClick={scrollDown} />
+        </motion.div>
+      </div>
     </div>
   );
 }
