@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Animation, Transition } from '@/lib/animation';
 
-function IntroSection() {
+function Cta() {
   const openCal = () => {
     window.open('https://cal.com/abdullah23/15min?overlayCalendar=true', '_blank');
   };
@@ -16,10 +16,10 @@ function IntroSection() {
   };
 
   return (
-    <div className="mx-auto mt-[120px] flex flex-col items-center bg-neutral-50 text-neutral-900 lg:mt-26 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
+    <div className="mx-auto mt-[120px] flex flex-col items-center text-neutral-900 lg:mt-38 lg:h-[500px] dark:bg-neutral-950 dark:text-white/90">
       <motion.div
         {...Animation}
-        transition={Transition(0.6)}
+        transition={Transition(0.1)}
         className="relative flex h-[70px] w-[95px] justify-center lg:h-[110px] lg:w-[140px]"
       >
         <Image
@@ -34,16 +34,16 @@ function IntroSection() {
 
       <motion.div
         {...Animation}
-        transition={Transition(0.8)}
+        transition={Transition(0.2)}
         className="w-full p-4 pb-1 text-left text-[26px] font-bold lg:text-[42px]"
       >
-        Hey, I&apos;m Abdullah Mukri
+        Hi, I&apos;m Abdullah Mukri
       </motion.div>
 
       <div className="pl-4">
         <motion.div
           {...Animation}
-          transition={Transition(1.15)}
+          transition={Transition(0.3)}
           className="text-left text-[13px] lg:text-[16px]"
         >
           <span className="mb-2 block text-[14px] font-semibold lg:text-[18px]">About</span>
@@ -60,7 +60,7 @@ function IntroSection() {
 
         <motion.div
           {...Animation}
-          transition={Transition(1.45)}
+          transition={Transition(0.4)}
           className="mt-[30px] flex space-x-4 lg:mt-[40px] lg:space-x-6"
         >
           <Button prop="Book a Meet" onClick={openCal} />
@@ -71,4 +71,4 @@ function IntroSection() {
   );
 }
 
-export default IntroSection;
+export default Cta;

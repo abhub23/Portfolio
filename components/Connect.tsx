@@ -8,7 +8,6 @@ import { GrSchedules } from 'react-icons/gr';
 import { toast } from 'sonner';
 
 function Connect() {
-  
   const { email, setEmail, message, setMessage, sendMessage, setSendMessage } = useConnect();
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
@@ -69,7 +68,7 @@ function Connect() {
 
   return (
     <div className="mx-auto flex h-[380px] flex-col items-start p-4 lg:h-[460px] lg:w-[700px]">
-      <div className="mx-auto text-center mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]">
+      <div className="mx-auto mb-2 text-center text-[20px] font-semibold lg:mb-5 lg:text-[30px]">
         Connect with me
       </div>
 
