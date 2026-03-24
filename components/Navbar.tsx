@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 flex w-full justify-center py-6">
-      <div className="dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 border-1/70 flex w-[800px] items-center justify-center rounded-full bg-white/10 px-2 py-1 shadow-xl ring ring-zinc-100 backdrop-blur-lg transition-colors duration-300 max-[450px]:w-[400px] max-[400px]:w-[345px] max-[350px]:w-[330px] max-[321px]:w-[310px] lg:h-[54px] lg:w-[860px] dark:border-white/20 dark:shadow-none dark:ring-transparent">
+      <div className="dark:bg-oklch(14.1% 0.005 285.823)/10 bg-opacity-10 border-1/70 flex w-[800px] items-center justify-center rounded-full bg-white/10 px-2 py-1 shadow-xl ring ring-zinc-100 backdrop-blur-lg transition-colors duration-300 max-[450px]:w-[400px] max-[400px]:w-[345px] max-[350px]:w-[330px] max-[321px]:w-[310px] lg:h-[54px] lg:w-[800px] dark:border-white/20 dark:shadow-none dark:ring-transparent">
         <div className="flex items-center justify-center gap-8 px-2 transition-all max-[450px]:gap-5 max-[400px]:gap-4 max-sm:gap-4">
           <Link href="/" underline="none">
             <Tooltip content="Home">
@@ -31,7 +31,7 @@ function Navbar() {
                 <HomeIcon
                   className={cn(
                     'size-[18px] text-black lg:size-[22px] dark:text-white',
-                    pathname == '/' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                    pathname == '/' && 'text-yellow-400 dark:text-yellow-400'
                   )}
                 />
               </div>
@@ -44,7 +44,7 @@ function Navbar() {
                 <CodeIcon
                   className={cn(
                     'size-[18px] text-black lg:size-[22px] dark:text-white',
-                    pathname == '/projects' ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                    pathname == '/projects' && 'text-yellow-400 dark:text-yellow-400'
                   )}
                 />
               </div>
@@ -57,7 +57,7 @@ function Navbar() {
                 <GitPullRequestArrow
                   className={cn(
                     'size-[16px] text-black lg:size-[20px] dark:text-white',
-                    pathname.startsWith('/opensource') ? '!text-[#cc9e2b] dark:!text-[#FFC83D]' : ''
+                    pathname.startsWith('/opensource') && 'text-yellow-400 dark:text-yellow-400'
                   )}
                 />
               </div>
