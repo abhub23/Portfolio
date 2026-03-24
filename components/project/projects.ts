@@ -64,15 +64,7 @@ export const projects = [
     desc: 'Draw app that lets you sketch freely with smooth strokes, vibrant colors, and an intuitive interface, delivering a fast, minimal, and immersive digital drawing experience.',
     srcLink: 'https://github.com/abhub23/draw',
     webLink: 'https://draw.abdullahtech.dev/',
-    skills: [
-      'Typescript',
-      'Next js',
-      'React',
-      'Canvas',
-      'TailwindCSS',
-      'Vercel',
-      'Zustand',
-    ],
+    skills: ['Typescript', 'Next js', 'React', 'Canvas', 'TailwindCSS', 'Vercel', 'Zustand'],
     imgLink: '/projects/draw.jpg',
   },
 ];
