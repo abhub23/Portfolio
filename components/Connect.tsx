@@ -1,16 +1,15 @@
 'use client';
 
 import { useRef } from 'react';
-import { useEmail, useMessage, useSendMessage } from '@/store/Connectwithme';
+import useConnect from '@/store/useConnect';
 import axios from 'axios';
 import { FaXTwitter } from 'react-icons/fa6';
 import { GrSchedules } from 'react-icons/gr';
 import { toast } from 'sonner';
 
 function Connect() {
-  const { email, setEmail } = useEmail();
-  const { message, setMessage } = useMessage();
-  const { sendMessage, setSendMessage } = useSendMessage();
+  
+  const { email, setEmail, message, setMessage, sendMessage, setSendMessage } = useConnect();
 
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -64,13 +63,13 @@ function Connect() {
         handleMessageError();
       }
     } catch (error) {
-      console.log('Error occured while sending message', error);
+      console.log('Error occurred while sending message', error);
     }
   };
 
   return (
-    <div className="mx-auto flex h-[380px] flex-col items-start p-4 lg:h-[460px] lg:w-[750px]">
-      <div className="mx-auto mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]">
+    <div className="mx-auto flex h-[380px] flex-col items-start p-4 lg:h-[460px] lg:w-[700px]">
+      <div className="mx-auto text-center mb-2 text-[20px] font-semibold lg:mb-5 lg:text-[30px]">
         Connect with me
       </div>
 
@@ -108,7 +107,7 @@ function Connect() {
         required={true}
         onChange={(e) => setEmail(e.currentTarget.value)}
         value={email}
-        className="mb-[12px] h-[32px] w-[325px] rounded-[5px] border-1 border-neutral-300 bg-neutral-50 p-2 text-[12px] focus:outline-none lg:h-[38px] lg:w-[705px] lg:border-[1px] lg:text-[15px] dark:border-neutral-600 dark:bg-neutral-950"
+        className="mb-[12px] h-[32px] w-[325px] rounded-[5px] border border-neutral-300 bg-neutral-50 p-2 text-[12px] focus:outline-none lg:h-[38px] lg:w-[705px] lg:border lg:text-[15px] dark:border-neutral-600 dark:bg-neutral-950"
       />
       <div className="p-[2px] text-[14px] font-normal lg:pb-[8px] lg:text-[16px]">Message</div>
       <textarea
@@ -118,7 +117,7 @@ function Connect() {
         required={true}
         onChange={(e) => setMessage(e.currentTarget.value)}
         value={message}
-        className="mb-[15px] h-[72px] max-h-[115px] min-h-[72px] w-[325px] max-w-[325px] min-w-[325px] resize overflow-hidden rounded-[4px] border-1 border-neutral-300 bg-neutral-50 p-2 text-[12px] focus:outline-none lg:mb-[20px] lg:max-h-[130px] lg:w-[705px] lg:max-w-[705px] lg:min-w-[705px] lg:border-[1px] lg:text-[15px] dark:border-neutral-600 dark:bg-neutral-950"
+        className="mb-[15px] h-[72px] max-h-[115px] min-h-[72px] w-[325px] max-w-[325px] min-w-[325px] resize overflow-hidden rounded-[4px] border border-neutral-300 bg-neutral-50 p-2 text-[12px] focus:outline-none lg:mb-[20px] lg:max-h-[130px] lg:w-[705px] lg:max-w-[705px] lg:min-w-[705px] lg:border lg:text-[15px] dark:border-neutral-600 dark:bg-neutral-950"
       />
       <button
         className="mt-1 h-9 w-[325px] cursor-pointer rounded-[4px] border-2 border-black bg-black text-[12px] tracking-wide text-white hover:bg-stone-900 lg:w-[705px] lg:text-[14px] dark:border-white dark:bg-white dark:text-black dark:hover:bg-gray-100"
