@@ -1,15 +1,8 @@
 import Link from 'next/link';
-import { Bricolage } from '@/utils/fonts';
-import { cn } from '@/lib/utils';
 
 function Footer() {
   return (
-    <div
-      className={cn(
-        'mb-1 flex h-10 items-center justify-center bg-transparent text-[12px] text-neutral-600 lg:text-[16px] dark:text-neutral-400',
-        Bricolage
-      )}
-    >
+    <div className="mb-1 flex h-10 items-center justify-center bg-transparent text-[12px] text-neutral-600 lg:text-[16px] dark:text-neutral-400">
       Designed and Developed by
       <Link
         className="ml-1.5 rounded-xs bg-neutral-200 px-[6px] py-[1px] font-normal text-neutral-950 dark:bg-neutral-800 dark:text-neutral-100"
