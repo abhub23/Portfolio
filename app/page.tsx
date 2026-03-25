@@ -2,7 +2,7 @@
 
 import Github from '@/components/Github';
 import Footer from '@/components/Footer';
-import IntroSection from '@/components/IntroSection';
+import Cta from '@/components/cta';
 import Projects from './projects/page';
 import Connect from '@/components/Connect';
 import Skills from '@/components/Skills';
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="bg-neutral-50 dark:bg-neutral-950">
       <div className={cn('mx-auto w-full max-w-[700px]', Bricolage)}>
-        <IntroSection />
+        <Cta />
         <Projects />
         <Experience />
         <Github />
