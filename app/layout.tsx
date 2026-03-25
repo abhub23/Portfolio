@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://abdullahtech.dev'),
   title: 'Abdullah Mukri',
   icons: {
-    icon: '/company/icon.webp',
+    icon: '/killua.png',
   },
   description: 'A Fullstack Engineer who enjoys writing Typescript and Go',
   keywords: [
