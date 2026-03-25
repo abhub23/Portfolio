@@ -40,22 +40,16 @@ function Cta() {
         Hi, I&apos;m Abdullah Mukri
       </motion.div>
 
-      <div className="pl-4">
+      <div className="px-4">
         <motion.div
           {...Animation}
           transition={Transition(0.3)}
           className="text-left text-[13px] lg:text-[16px]"
         >
           <span className="mb-2 block text-[14px] font-semibold lg:text-[18px]">About</span>
-          {/* I have{' '} */}
-          {/* <span className="rounded-lg bg-neutral-200 p-1 px-[6px] dark:bg-neutral-700">
-            2 years of experience
-          </span>{' '}
-          as a  */}
-          Fullstack Software Engineer, crafting products using Typescript and Go. I have expertise
-          in wide range of tech but always want to be known as a student of Computer science.
-          Want&apos;s to connect, share thoughts or just say hello? please don&apos;t hesitate. feel
-          free to connect!
+          Full-stack Software Engineer, crafting products with Typescript and Go. I have expertise
+          in wide range of tech stack. Want&apos;s to connect, share thoughts or just say hello?
+          please don&apos;t hesitate. feel free to connect!
         </motion.div>
 
         <motion.div
