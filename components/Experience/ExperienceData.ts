@@ -18,7 +18,7 @@ const experience: ExpTypes[] = [
   {
     org: 'Oasis Infobyte',
     duration: 'Oct 2023 - Apr 2024',
-    logo: '/company/icon.webp',
+    logo: '/company/oasis.jpg',
     role: 'Software Development Engineer, Intern',
     link: 'https://oasisinfobyte.com/',
   },

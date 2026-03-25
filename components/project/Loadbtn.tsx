@@ -7,7 +7,7 @@ export function Loadbtn({ name, onClick, icon }: BtnProps) {
     <button
       onClick={onClick}
       className={cn(
-        'flex cursor-pointer rounded-[3px] border border-black bg-black/90 px-[6px] py-[1px] font-medium text-white lg:text-[12px] dark:bg-white dark:text-black',
+        'flex cursor-pointer rounded-[3px] border border-black bg-black/90 px-[6px] py-px font-medium text-white lg:text-[12px] dark:bg-white dark:text-black',
         Bricolage
       )}
     >
