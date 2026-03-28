@@ -9,7 +9,6 @@ function Github() {
         alt="Github Chart"
         width={760}
         height={500}
-        unoptimized={true}
         loading="lazy"
       />
     </div>
