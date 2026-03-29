@@ -73,7 +73,7 @@ function Navbar() {
           </span>
 
           <Link
-            href="https://drive.google.com/file/d/11lN17YyU0CKMY3RTzL9tNm4vHwMjWbD9/view"
+            href="https://drive.google.com/file/d/1vVtLj63Ee-ob9Znw4mnnUjNel-9n67iy/view"
             target="_blank"
             underline="none"
           >
