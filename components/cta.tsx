@@ -35,12 +35,12 @@ function Cta() {
       <motion.div
         {...Animation}
         transition={Transition(0.2)}
-        className="w-full p-4 pb-1 text-left text-[26px] font-bold lg:text-[42px]"
+        className="w-full lg:p-4 p-6 pb-1 text-left text-[26px] font-bold lg:text-[42px]"
       >
         Hi, I&apos;m Abdullah Mukri
       </motion.div>
 
-      <div className="px-4">
+      <div className="lg:px-4 px-6">
         <motion.div
           {...Animation}
           transition={Transition(0.3)}
