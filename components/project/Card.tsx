@@ -8,7 +8,7 @@ import { GithubIcon } from '@/components/ui/svgs/GithubIcon';
 
 function Card({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) {
   return (
-    <article className="relative flex w-[310px] flex-col items-center justify-between rounded-sm border border-zinc-300/80 bg-neutral-50 p-6 lg:w-[340px] dark:border-zinc-800 dark:bg-neutral-950">
+    <article className="relative flex w-[320px] flex-col items-center justify-between rounded-sm border border-zinc-300/80 bg-neutral-50 p-6 lg:w-[340px] dark:border-zinc-800 dark:bg-neutral-950">
       <ShineBorder
         className="rounded-sm"
         shineColor={[
@@ -51,7 +51,7 @@ function Card({ Title, Desc, SrcLink, WebLink, Skills, Imglink }: Cardprops) {
         ))}
       </div>
 
-      <div className="mt-4 mr-2.5 flex w-full cursor-pointer justify-start gap-x-2">
+      <div className="mt-4 lg:mr-2.5 flex w-full cursor-pointer justify-start gap-x-2">
         <Link href={WebLink} target="_blank">
           <Button size={'sm'}>
             <ExternalLinkIcon />
