@@ -67,7 +67,7 @@ function Connect() {
   };
 
   return (
-    <div className="mx-auto flex h-[380px] flex-col items-start p-4 lg:h-[460px] lg:w-[700px]">
+    <div className="mx-auto flex h-[380px] flex-col items-start p-4 lg:h-[460px] lg:w-[700px] w-[90%]">
       <div className="mx-auto mb-2 text-center text-[20px] font-semibold lg:mb-5 lg:text-[30px]">
         Connect with me
       </div>
