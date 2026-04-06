@@ -44,9 +44,9 @@ function Cta() {
         <motion.div
           {...Animation}
           transition={Transition(0.3)}
-          className="text-left text-[13px] lg:text-[16px]"
+          className="text-left text-[16px] font-medium tracking-tight lg:tracking-normal lg:text-[16px]"
         >
-          <span className="mb-2 block text-[14px] font-semibold lg:text-[18px]">About</span>
+          <span className="mb-2 block text-lg font-semibold lg:text-[18px]">About</span>
           Full-stack Software Engineer, crafting products with Typescript and Go. I have expertise
           in wide range of tech stack. Want&apos;s to connect, share thoughts or just say hello?
           please don&apos;t hesitate. feel free to connect!
