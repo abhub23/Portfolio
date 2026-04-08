@@ -40,16 +40,18 @@ function Cta() {
         Hi, I&apos;m Abdullah Mukri
       </motion.div>
 
-      <div className="lg:px-4 px-6">
+      <div className="px-6 lg:px-4">
         <motion.div
           {...Animation}
           transition={Transition(0.3)}
-          className="text-left text-[16px] font-medium tracking-tight lg:tracking-normal lg:text-[16px]"
+          className="text-left text-[16px] font-medium tracking-tight lg:text-[16px] lg:tracking-normal"
         >
           <span className="mb-2 block text-lg font-semibold lg:text-[18px]">About</span>
-          Full-stack Software Engineer, crafting products with Typescript and Go. I have expertise
-          in wide range of tech stack. Want&apos;s to connect, share thoughts or just say hello?
-          please don&apos;t hesitate. feel free to connect!
+          <span className="text-muted-foreground">
+            Full-stack Software Engineer, crafting products with Typescript and Go. I have expertise
+            in wide range of tech stack. Want&apos;s to connect, share thoughts or just say hello?
+            please don&apos;t hesitate. feel free to connect!
+          </span>
         </motion.div>
 
         <motion.div
