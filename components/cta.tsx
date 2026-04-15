@@ -48,9 +48,7 @@ function Cta() {
         >
           <span className="mb-2 block text-lg font-semibold lg:text-[18px]">About</span>
           <span className="text-muted-foreground">
-            Full-stack Software Engineer, crafting products with Typescript and Go. I have expertise
-            in wide range of tech stack. Want&apos;s to connect, share thoughts or just say hello?
-            please don&apos;t hesitate. feel free to connect!
+          Full-stack Software Engineer crafting products with TypeScript and Go. I take extreme ownership of what I build from architecture to deployment. Open to connect.
           </span>
         </motion.div>
 
